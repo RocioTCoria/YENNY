@@ -1,0 +1,150 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif; 
+}
+
+/* personalizaciones bootstrap */
+:root{
+    --blanco : #F7F8FA;
+    --azul : #002B62;
+    --verde : #005B2F;
+    --gris : #BABABA;
+}
+
+.btn-primary {
+    --bs-btn-color: 000;
+    --bs-btn-bg: #BABABA;
+    --bs-btn-border-color: #BABABA;
+    --bs-btn-hover-color: 000;
+    --bs-btn-hover-bg: #5e525b;
+    --bs-btn-hover-border-color: #5e525b;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: 000;
+    --bs-btn-active-bg: #0a58ca;
+    --bs-btn-active-border-color: #0a53be;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: 000;
+    --bs-btn-disabled-bg: #0d6efd;
+    --bs-btn-disabled-border-color: #0d6efd;  
+    border-radius: 9px;
+    height: 40px;
+    padding: 0px 50px;
+    color: black;
+}
+
+/*-----------------------------*/
+
+html {
+    min-height: 100%;
+    height: auto;
+}
+
+.contenedorpago {
+  
+      
+    background-color: #D9D9D9;
+    padding: 20px;
+    border-radius: 15px;  
+    margin-top: 250px;
+}
+
+.center-block {
+    position: relative;
+    margin: 150px auto;
+    max-width: 720px;
+}
+
+body {
+    background: linear-gradient(var(--verde) 0px, var(--verde) 170px, var(--blanco) 174px, var(--blanco) 180px, var(--azul) 80px, var(--azul) 100%) 100%/100% no-repeat;
+    width: 100%;
+    margin:0 auto;
+}
+
+#logo {
+  
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  
+}
+
+.form-control {
+    border-radius: 6px;
+    padding: 15px 10px;
+    height: auto;
+}
+
+.librito {
+    width: 100%;
+}
+
+#fotoperfil {
+    position: absolute;
+    top: 15px;
+    left: 1800px;
+    cursor: pointer;
+}
+
+#nombreautor {
+    position: absolute;
+    top: 30px;
+    left: 1688px;
+    color: white;
+}
+
+#campana {
+    position: absolute;
+    top: 30px;
+    left: 1630px;
+    cursor: pointer;
+}
+
+#propuesta {
+    position: absolute;
+    top: 120px;
+    left: 1400px;
+    padding: 2px 80px;
+    border-radius: 3px;
+    background-color: #BDBDBD;
+    border: none;
+}
+
+#cargarmanu {
+    position: absolute;
+    top: 120px;
+    left: 1660px;
+    padding: 2px 40px;
+    border-radius: 3px;
+    background-color: #BDBDBD;
+    border: none;
+}
+
+#estatusss {
+  
+  position: absolute;
+  top: 120px;
+  left: 1170px;
+  padding: 2px 80px;
+  border-radius: 3px;
+  background-color: #BDBDBD;
+  border: none;
+  font-size: 16px;
+}
+
+#ubicar {
+    background-color: #002B62;
+    width: 100%;
+    height: 100px;
+}
+
+footer {
+  
+  background-color: var(--verde);
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  width: 100%;
+  margin-top: 300px;
+}

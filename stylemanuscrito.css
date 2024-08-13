@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* personalizaciones bootstrap */
+:root {
+    --blanco: #F7F8FA;
+    --azul: #002B62;
+    --verde: #005B2F;
+    --gris: #BABABA;
+}
+
+body {
+  
+    background: linear-gradient(var(--verde) 0px, var(--verde) 170px, var(--blanco) 174px, var(--blanco) 180px, var(--azul) 80px, var(--azul) 100%) 100%/100% no-repeat;
+    width: 100%;
+    margin: 0 auto;
+    width: 100%;
+    margin: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; 
+    font-family: 'Roboto', sans-serif; 
+}
+
+header {
+  
+    background: var(--verde);
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+#logo {
+  
+    position: absolute;
+    top: 10px;
+    left: 40px;
+}
+
+main {
+  
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    width: 100%;
+}
+
+#main-content {
+  
+    background-color: var(--gris);
+    padding: 2em;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: black; 
+}
+
+section {
+  
+    margin-bottom: 1.5em;
+}
+
+label {
+  
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+input[type="text"], input[type="file"] {
+  
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+button {
+  
+    padding: 0.7em 1.5em;
+    background-color: #627FA5;
+    color: white;
+    border: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 4px;
+}
+
+button:hover {
+  
+    background-color: #95BFF6;
+}
+
+footer {
+  
+    background-color: var(--verde);
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+#preview-section {
+  
+    display: none;
+}
+
+#preview {
+  
+    border: 1px solid ccc;
+    padding: 1em;
+    background-color: #f9f9f9;
+    color: 000;
+}
+
+#fotoperfil {
+  
+  position: absolute;
+  top: 15px;
+  left: 1800px;
+  cursor: pointer;
+}
+
+#nombreautor {
+  
+  position: absolute;
+  top: 20px;
+  left: 1688px;
+  color: white;
+  font-size: 30px;
+  
+}
+
+#campana {
+  
+  position: absolute;
+  top: 35px;
+  left: 1630px;
+  cursor: pointer;
+}
+
+#propuesta {
+  
+  position: absolute;
+  top: 120px;
+  left: 1400px;
+  padding: 5px 80px;
+  border-radius: 3px;
+  background-color: #BDBDBD;
+  border: none;
+  color: black;
+}
+
+#cargarmanu {
+  
+  position: absolute;
+  top: 120px;
+  left: 1660px;
+  padding: 5px 40px;
+  border-radius: 3px;
+  background-color: #BDBDBD;
+  border: none;
+  color: black;
+}
+
+#estatusss {
+  
+  position: absolute;
+  top: 120px;
+  left: 1145px;
+  padding: 5px 90px;
+  border-radius: 3px;
+  background-color: #BDBDBD;
+  border: none;
+  font-size: 16px;
+  color: black;
+}

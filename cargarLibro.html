@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yenny, página web de Yenny librería para la publicación de libros de autor independiente." />
+    <meta name="keywords" content="YENNY, manuscrito, libros, sinopsis, venta"/>
+    <meta name="robots" content="https://www.yenny-elateneo.com/"/>
+    <meta name="author" content="equipocomodin@gmail.com"/>
+    <meta name="publisher" content="YENNY"/>
+  
+    <script src="Routes.js" type="text/javascript"></script>
+    <title>YENNY - Carga de Libros</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  
+</head>
+<body>
+  
+     <nav>   
+      
+        <a href="pagautor.html" title="paga autor">
+          
+          <img id="logo" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/logo.png?v=1717799493674" alt="Logo YENNY" width="8%" title="Logo YENNY"/>
+  
+          <h2 id="nombreautor"> Ghami </h2>
+           
+          <img id="fotoperfil" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/ea.png?v=1717891692208" alt="Foto de perfil" width="4%" title="foto de perfil"/>
+        </a>
+      
+         <img onclick="Aviso()" id="campana" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/campa.png?v=1717864364937" alt="campana de notificación" width="2%" title="campana notificaciones"/>
+          
+          
+    </nav>
+  
+    <div class="menu">
+      
+        <button id="boton1" onclick="goToCarga()">Cargar libro</button>
+        <button id="boton2" onclick="goToStatusWriter()" class="gray">Estatus</button>
+
+    </div>
+  
+    <div class="content">
+        <div class="form-container">
+            <form>
+                <div class="row">
+                    <div class="col">
+                         <div class="file-input-container">
+                            <label for="cover" class="file-input-label">Cargar Portada</label>
+                            <input type="file" id="cover" name="cover" class="file-input">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <input type="text" id="title" name="title" placeholder="Titulo">
+                        <input type="text" id="author" name="author" placeholder="Autor">
+                        <textarea id="synopsis" name="synopsis" placeholder="Sinopsis" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                     <textarea id="synopsis" name="synopsis" placeholder="Manuscrito" rows="4" class="w-98"></textarea>
+                </div>
+                <button type="submit">Cargar</button>
+            </form>
+        </div>
+    </div>
+  
+  <footer>
+        <p>&copy; 2024 YENNY</p>
+     
+    </footer>
+    
+</body>
+</html>

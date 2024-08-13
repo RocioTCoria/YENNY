@@ -4,3 +4,6 @@
   
 <a href="https://www.figma.com/design/4zVkUsxBTtYJd8BW2qzoa4/Wireframe---YENNY?node-id=0-1&t=wvvYnmpbqy2ic2Jj-0" target="_blank"> Wireframe </a>
 <p>Realización del diseño de la página web.</p>
+
+<a href="https://www.figma.com/design/x2wgzXkN4cuzudBU5wR7gg/Untitled?node-id=0-1&t=Bh56EMZMXGevuXG1-0" target="_blank"> Manual de Marca </a>
+<p>Explicación del logo.</p>

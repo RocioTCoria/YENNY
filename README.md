@@ -10,7 +10,7 @@
     <p>Basado en la pagina web de Yenny vinculado a darle protagonismo a las creaciones de los escritores independientes.</p>
 
     <h2>Figma</h2>
-    <a href="https://www.figma.com/design/4zVkUsxBTtYJd8BW2qzoa4/Wireframe---YENNY"> Diseño </a>
-    <p>Realizacion del diseño de la página web.</p>
+    <a href="https://www.figma.com/design/4zVkUsxBTtYJd8BW2qzoa4/Wireframe---YENNY?node-id=0-1&t=wvvYnmpbqy2ic2Jj-0"> Diseño </a>
+    <p>Realización del diseño de la página web.</p>
 </body>
 </html>

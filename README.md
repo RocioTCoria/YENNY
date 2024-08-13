@@ -6,7 +6,7 @@
 </head>
 <body> 
     <h1>Grupo Comodin</h1>
-    <a href="https://yenny-eight.vercel.app/" target=_ blank> Proyecto de YENNY</a>
+    <a href="https://yenny-eight.vercel.app/" target="_blank"> Proyecto de YENNY</a>
     <p>Basado en la pagina web de Yenny vinculado a darle protagonismo a las creaciones de los escritores independientes.</p>
 
     <h2>Figma</h2>

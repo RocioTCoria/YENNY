@@ -13,6 +13,18 @@
     --gris : #BABABA;
 }
 
+#emailError {
+
+    color:red;
+    display: none;
+}
+
+#contraseñaError {
+
+    color:red;
+    display: none;
+}
+
 #lista{
   
     margin-top: 180px;

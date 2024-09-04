@@ -67,4 +67,41 @@ function Ingresar(){
 
 }
 
+// register.html //
+
+function Registro() {
+
+    var nombreR= document.getElementById("firstName").value;
+    var apellidoR = document.getElementById("lastName").value;
+    var mailregistro = document.getElementById("floatingInput").value;
+    var contraseñaR = document.getElementById("floatingPassword");
+
+    var Errorregistro = document.getElementById("emailError");
+    var ErrorG = document.getElementById("errorGeneral");
+
+    var RegistroValido = true;
+
+    if (mailregistro.includes('@')) {  // aca explico que si el mail no tiene @ le salta el mensaje debajo de que le falta
+
+        Errorregistro.style.display = 'none';
+
+    } else {
+
+        Errorregistro.style.display = 'block';
+    }
+
+    if (nombreR === "" || apellidoR === "" || mailregistro === "" || contraseñaR === "") {  // "" esta vacio; || (significa OR) si alguno de los campos esta vacio el resultado es true.
+        
+        ErrorG.style.display = 'block';
+        RegistroValido = false; // como el campo es true y esta vacio, necesitamos que sean completados por lo tanto salta el mensaje
+
+    } else {
+
+        ErrorG.style.display = 'none';
+    }
+
+    if (RegistroValido) {
+        window.location.href = "pagautor.html";
+    }
+}
 

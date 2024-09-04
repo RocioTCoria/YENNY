@@ -25,6 +25,12 @@
     display: none;
 }
 
+#errorGeneral {
+
+    color:red;
+    display: none;
+}
+
 #lista{
   
     margin-top: 180px;

@@ -30,6 +30,7 @@ function Ingresar(){
     var mail = document.getElementById("floatingInput").value;
     var contraseña = document.getElementById("floatingPassword").value;
     var login = document.getElementById("login");
+
     for (let index = 0; index < usuarios.length; index++) {
         if (usuarios[index].contraseña = contraseña && usuarios[index].mail ==  mail  ) {
             if (usuarios[index].rol==1) {
@@ -45,6 +46,18 @@ function Ingresar(){
     }
     alert("Error");
 
+}
+
+// Error de Inicio de Sesion //
+
+function Ingresar () {
+
+    var faltantearroba = document.getElementById("floatingInput").value;
+
+    if (faltantearroba) {
+
+        
+    }
 }
 
 

@@ -21,11 +21,60 @@
   
 <body> 
   
-    <div class="center-block w-90">
-       
-    </div> 
+    <nav>   
+      
+        <a href="#" >
+          
+          <img id="logo" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/logo.png?v=1717799493674" alt="Logo YENNY" title="logo YENNY" width="8%"/>
   
-    <h1> Compra </h1>
+          <h2 id="nombreautor"> Diego </h2>
+          
+          <img id="fotoperfil" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/gatito.png?v=1717802499885" alt="Foto de perfil" title="foto de perfil YENNY" width="4%"/>
+           
+        </a>
+      
+          <img onclick="Aviso()" id="campana" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/campa.png?v=1717864364937" alt="campana de notificación" width="2%" title="campana de notificaciones"/>
+      
+          <div id="notificacion"> 
+          
+           <p id="mensaje"> Su manuscrito se ha subido con éxito. </p> 
+        
+         </div>
+      
+          <a href="status.html"> <button id="estatusss"> Estatus </button> </a>
+      
+          <a href="estado.html"> <button id="propuesta"> Propuestas </button> </a>
+      
+          <a href="manuscrito.html"> <button id="cargarmanu"> Cargar manuscrito </button> </a>
+      
+    </nav>
+    
+    <main>
+        <div id="main-content">
+            <section id="upload-section">
+                <h2>Producto</h2>
+
+                <form id="formcompra">
+                    <label for="title">Compra</label>
+                    <input type="text" id="title" name="title" required>
+                    
+                    <label for="author"></label>
+                    <input type="text" id="author" name="author" required>
+                    
+                    <label for="manuscript">Cargar Manuscrito (PDF):</label>
+                    <input type="file" id="manuscript" name="manuscript" accept="application/pdf" required>
+                    
+                    <button type="submit">Cargar</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        
+        <p>&copy; 2024 YENNY</p>
+     
+    </footer>
        
 </body>
   

@@ -403,3 +403,37 @@ footer {
 
 /*---PAGINA DE COMPRA DE LIBRO---*/
 
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+#nuevasection {
+
+  background-color: #BABABA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin-top: 300px;
+
+}
+
+#nuevasection div {
+  margin-bottom: 20px;
+}
+
+section {
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

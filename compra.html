@@ -38,10 +38,10 @@
                 <form id="formEntrega">
 
                     <label for="domicilio">Enviar a domicilio</label>
-                    <input type="checkbox" id="domicilio" name="domicilio" required> <br>
+                    <input type="checkbox" id="domicilio" name="domicilio" required onclick="UnaVez('domicilio', 'vendedor')"> <br>
 
                     <label for="vendedor">Retirar en el domicilio del vendedor</label>
-                    <input type="checkbox" id="vendedor" name="vendedor" required>
+                    <input type="checkbox" id="vendedor" name="vendedor" required onclick="UnaVez('domicilio', 'vendedor')">
 
                 </form>
 
@@ -50,13 +50,13 @@
                 <form id="formPago">
 
                     <label for="crédito">Nueva tarjeta de crédito</label>
-                    <input type="checkbox" id="crédito" name="domicilio" required> <br>
+                    <input type="checkbox" id="crédito" name="domicilio" required onclick="Otravez('crédito', 'débito', 'efectivo')"> <br>
 
                     <label for="débito">Nueva tarjeta de débito</label>
-                    <input type="checkbox" id="débito" name="vendedor" required> <br>
+                    <input type="checkbox" id="débito" name="vendedor" required onclick="Otravez('crédito', 'débito', 'efectivo')"> <br>
 
                     <label for="efectivo">Efectivo en puntos de pago</label>
-                    <input type="checkbox" id="efectivo" name="vendedor" required>
+                    <input type="checkbox" id="efectivo" name="vendedor" required onclick="Otravez('crédito', 'débito', 'efectivo')">
 
                 </form>
 

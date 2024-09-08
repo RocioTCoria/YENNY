@@ -29,8 +29,8 @@ var libros = [{
 
 window.onload = function(){
 
-  var lista = document.getElementById("lista");
-  for (let index = 0; index < libros.length; index++) { // variable "index" valor 0 | "libros.length" devuelve el número de elementos en el array "libros" | "index++"" incrementa el valor de index en 1
+    var lista = document.getElementById("lista");
+    for (let index = 0; index < libros.length; index++) { // variable "index" valor 0 | "libros.length" devuelve el número de elementos en el array "libros" | "index++"" incrementa el valor de index en 1
         var elemento = document.createElement("li");
         
         var titulo = document.createElement("h3");
@@ -59,7 +59,7 @@ window.onload = function(){
         img.classList.add("foto");
     
         
-       var boton = document.createElement("a");
+        var boton = document.createElement("a");
        boton.textContent="Comprar";
        boton.href="compra.html";
        boton.classList.add("boton");
@@ -79,15 +79,48 @@ window.onload = function(){
 }
 
 function Aviso() {
-  
+
         var notificacion = document.getElementById("notificacion");
         if (notificacion.style.display === "none" || notificacion.style.display === "") {
-          
+
                 notificacion.style.display = "block";
-          
+
         } 
         else {
-              
+
                 notificacion.style.display = "none";
             }
         }
+
+// COMPRA.HTML //
+
+function UnaVez(checkedId, ...otherIds) {
+
+        var checkedBox = document.getElementById(checkedId);
+
+    // Verifica si la casilla marcada está seleccionada
+    if (checkedBox.checked) {
+        // Si está marcada, deshabilita todas las demás casillas
+        otherIds.forEach(id => {
+
+            var checkbox = document.getElementById(id);
+            checkbox.disabled = true;
+    });
+    } else {
+        // Si no está marcada, habilita todas las demás casillas
+        otherIds.forEach(id => {
+            var checkbox = document.getElementById(id);
+            checkbox.disabled = false;
+        });
+    }
+}
+
+function Otravez(checkedId, ...otherIds) {// "checkedId" -> es un array q toma la id del del input marcado && "...otherIds" -> toma los id de los inputs dentro del form 
+
+    var checkedBox = document.getElementById(checkedId);
+
+    otherIds.forEach(id => {//  ejecuta la función para cada id
+        var checkbox = document.getElementById(id);
+        checkbox.disabled = checkedBox.checked; // Deshabilita las otras si una está marcada
+    });
+}

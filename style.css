@@ -404,36 +404,64 @@ footer {
 /*---PAGINA DE COMPRA DE LIBRO---*/
 
 body {
+
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 
 }
 
+nav {
+    margin: 0;
+    padding: 0;
+
+}
+
+#Central {
+
+  margin: 200px;
+  margin-top: 0px;
+  font-family: 'Roboto', sans-serif; 
+}
 
 #nuevasection {
 
   background-color: #BABABA;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  margin-top: 300px;
-
+  position: relative;
+  top: 250px;
+  width: 50%;
+  border-radius: 6px;
+  padding: 45px;
 }
 
 #nuevasection div {
   margin-bottom: 20px;
 }
 
-section {
-  padding: 20px;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 8px;
-  width: 80%;
-  max-width: 800px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+article {
+
+  background-color: #BABABA;
+  font-family: 'Roboto', sans-serif; 
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -170px;
+  left: 780px;
+  width: 50%;
+  border-radius: 6px;
+  padding: 45px;
+}
+
+#nuevasection form {
+
+  padding-bottom: 10px;
+}
+
+#nuevasection form label {
+
+  padding: 10px;
 }

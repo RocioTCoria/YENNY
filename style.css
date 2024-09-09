@@ -382,3 +382,33 @@ footer {
   width: 100%;
   margin-top: auto;
 }
+
+#filtro {
+  position: relative;
+  background-color: #D9D9D9;
+  top: 180px;
+  padding-bottom: 30px;
+  display: flex; /* Añade display flex para alinear los elementos */
+  align-items: center;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan si es necesario */
+}
+
+#idNombre, #idAutor, #idGenero, #idClave {
+  margin-right: 10px; /* Añade espacio entre los campos */
+}
+
+#idClave {
+  flex: 1; /* Hace que el campo de palabras clave ocupe el espacio restante */
+}
+
+#filtrar {
+  background-color: #BDBDBD;
+  border: none;
+  border-radius: 3px;
+  padding: 8px 35px;
+  color: black;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 1700px; /* Añade espacio entre el campo de palabras clave y el botón */
+  margin-top: 30px;
+}

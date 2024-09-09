@@ -61,7 +61,7 @@ window.onload = function(){
         
        var boton = document.createElement("a");
        boton.textContent="Comprar";
-       boton.href="compra.html";
+       boton.href="compra.html?" + index;
        boton.classList.add("boton");
        
        elemento.appendChild(titulo);

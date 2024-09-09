@@ -55,6 +55,17 @@ body {
 }
 
 
+#mensaje {
+    position: absolute;
+    background-color: #6A9B83;
+    top: 100px;
+    left: 1510px;
+    padding: 15px 20px 15px 15px;
+    border-radius: 5px;
+    transition: top 0.5s ease;
+    z-index: 2;
+}
+
 
 .header {
     
@@ -138,6 +149,14 @@ body {
     justify-content: center;
 }
 
+.gray-bg{
+  width:60%;
+  margin:200px auto;
+  background-color: var(--gris);
+  border-radius:5px;
+  display:block;
+}
+
 .checkbox-content{
   
     padding: 10px 20px 0px;
@@ -184,6 +203,18 @@ body {
     width:48%;
     margin-right:2%;
     float:left;
+}
+
+.col-25{
+  width:23%;
+  margin-right:2%;
+  float:left;
+}
+
+.col-75{
+  width:73%;
+  margin-right:2%;
+  float:left;
 }
 
 .form-container .file-input-container {
@@ -299,6 +330,24 @@ input[type="checkbox"]{
   font-size: 16px;
   cursor: pointer;
   
+}
+
+#infoCompra img {
+  width:100%
+}
+
+#tapa{
+  margin-top:20px;
+}
+
+.boton {
+  
+  background-color: var(--azul);
+  border: none;
+  border-radius: 5px;
+  padding: 8px 35px;
+  color: white;
+  text-decoration: none; 
 }
 
 footer {

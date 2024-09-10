@@ -414,28 +414,31 @@ body {
 }
 
 nav {
+
     margin: 0;
     padding: 0;
-
 }
 
 #Central {
 
-  margin: 200px;
-  margin-top: 0px;
-  font-family: 'Roboto', sans-serif; 
+  margin-left: 150px;
+  margin-right: 150px; 
+  margin-top: 150px;
+  font-family: 'Roboto', sans-serif;
+  width: 80%;
+  display: flex;
+  background-color: red; 
 }
 
 #nuevasection {
 
-  background-color: #BABABA;
-  display: flex;
+  background-color: #289919;
+  flex: 1;
   flex-direction: column;
-  position: relative;
-  top: 250px;
-  width: 50%;
+  width: 40%;
   border-radius: 6px;
-  padding: 45px;
+  padding: 25px;
+
 }
 
 #nuevasection div {
@@ -446,14 +449,11 @@ article {
 
   background-color: #BABABA;
   font-family: 'Roboto', sans-serif; 
-  display: flex;
   flex-direction: column;
-  position: relative;
-  top: -170px;
-  left: 780px;
-  width: 50%;
+  width: 40%;
   border-radius: 6px;
-  padding: 45px;
+  padding: 25px;
+  float: left;
 }
 
 #nuevasection form {

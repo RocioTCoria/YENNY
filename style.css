@@ -8,8 +8,8 @@
 :root{
   
     --blanco : #F7F8FA;
-    --azul : #002B62;
-    --verde : #005B2F;
+    --azul : #EFFFF6;
+    --verde : #335D92;
     --gris : #BABABA;
 }
 
@@ -387,28 +387,34 @@ footer {
   position: relative;
   background-color: #D9D9D9;
   top: 180px;
-  padding-bottom: 30px;
-  display: flex; /* Añade display flex para alinear los elementos */
-  align-items: center;
-  flex-wrap: wrap; /* Permite que los elementos se envuelvan si es necesario */
+  padding: 30px 200px 30px 200px; /* Ajuste para centrar los elementos y mantenerlos en el fondo gris */
+  display: flex; /* Utilizamos flexbox para alinear los elementos */
+  flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si no caben en la misma */
+  gap: 20px; /* Espacio entre los elementos */
 }
 
 #idNombre, #idAutor, #idGenero, #idClave {
-  margin-right: 10px; /* Añade espacio entre los campos */
-}
-
-#idClave {
-  flex: 1; /* Hace que el campo de palabras clave ocupe el espacio restante */
+  background-color: #BDBDBD;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  width: 200px; /* Ancho de las cajas de texto */
+  margin-bottom: 10px; /* Añadimos un pequeño margen inferior para separarlos */
 }
 
 #filtrar {
   background-color: #BDBDBD;
   border: none;
   border-radius: 3px;
-  padding: 8px 35px;
+  padding: 10px 20px;
   color: black;
   cursor: pointer;
-  font-size: 16px;
-  margin-left: 1700px; /* Añade espacio entre el campo de palabras clave y el botón */
-  margin-top: 30px;
+  align-self: center; /* Alinea el botón verticalmente en el centro */
+  margin-left: 1500px;
+  margin-top: 8px;
 }
+
+#idGenero {
+  padding-right: 20px; /* Ajuste para dar espacio en el dropdown */
+}
+

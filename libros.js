@@ -94,33 +94,46 @@ function Aviso() {
 
 // COMPRA.HTML //
 
-function UnaVez(checkedId, ...otherIds) {
+window.onload = function() {
+    var btn = document.getElementById("agregarDomicilioBtn");
+    if (btn) {  // Asegúrate de que el botón existe
+        btn.addEventListener("click", function() {
+            console.log("Botón presionado");
+            var domicilioForm = document.getElementById("formDomicilio");
 
-        var checkedBox = document.getElementById(checkedId);
-
-    // Verifica si la casilla marcada está seleccionada
-    if (checkedBox.checked) {
-        // Si está marcada, deshabilita todas las demás casillas
-        otherIds.forEach(id => {
-
-            var checkbox = document.getElementById(id);
-            checkbox.disabled = true;
-    });
-    } else {
-        // Si no está marcada, habilita todas las demás casillas
-        otherIds.forEach(id => {
-            var checkbox = document.getElementById(id);
-            checkbox.disabled = false;
+            // Mostrar u ocultar el formulario
+            if (domicilioForm.style.display === "none" || domicilioForm.style.display === "") {
+                domicilioForm.style.display = "block";
+            } else {
+                domicilioForm.style.display = "none";
+            }
         });
     }
+};
+
+
+function UnaVez(clickedId) {
+   // Obtén todas las casillas de verificación
+    var checkboxes = document.querySelectorAll('#formEntrega input[type="checkbox"]');
+
+   // Recorre todas las casillas
+    checkboxes.forEach(checkbox => {
+        if (checkbox.id !== clickedId) {
+           // Si la casilla no es la que se hizo clic, deshabilítala o habilítala
+            checkbox.disabled = document.getElementById(clickedId).checked;
+        }
+    });
 }
 
-function Otravez(checkedId, ...otherIds) {// "checkedId" -> es un array q toma la id del del input marcado && "...otherIds" -> toma los id de los inputs dentro del form 
+function Otravez(clickedId) {
+    // Obtén todas las casillas de verificación
+    var checkboxes = document.querySelectorAll('#formPago input[type="checkbox"]');
 
-    var checkedBox = document.getElementById(checkedId);
-
-    otherIds.forEach(id => {//  ejecuta la función para cada id
-        var checkbox = document.getElementById(id);
-        checkbox.disabled = checkedBox.checked; // Deshabilita las otras si una está marcada
+    // Recorre todas las casillas
+    checkboxes.forEach(checkbox => {
+        if (checkbox.id !== clickedId) {
+            // Si la casilla no es la que se hizo clic, deshabilítala o habilítala
+            checkbox.disabled = document.getElementById(clickedId).checked;
+        }
     });
 }

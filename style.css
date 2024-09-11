@@ -423,16 +423,16 @@ nav {
 
   margin-left: 150px;
   margin-right: 150px; 
-  margin-top: 150px;
+  margin-top: 230px;
   font-family: 'Roboto', sans-serif;
   width: 80%;
   display: flex;
-  background-color: red; 
+
 }
 
 #nuevasection {
 
-  background-color: #289919;
+  background-color: #BABABA;
   flex: 1;
   flex-direction: column;
   width: 40%;
@@ -443,17 +443,6 @@ nav {
 
 #nuevasection div {
   margin-bottom: 20px;
-}
-
-article {
-
-  background-color: #BABABA;
-  font-family: 'Roboto', sans-serif; 
-  flex-direction: column;
-  width: 40%;
-  border-radius: 6px;
-  padding: 25px;
-  float: left;
 }
 
 #nuevasection form {

@@ -371,7 +371,9 @@ nav {
   background-color: #BDBDBD;
   border: none;
   font-size: 16px;
+ 
 }
+
 
 footer {
   
@@ -387,10 +389,10 @@ footer {
   position: relative;
   background-color: #D9D9D9;
   top: 180px;
-  padding: 30px 200px 30px 200px; /* Ajuste para centrar los elementos y mantenerlos en el fondo gris */
-  display: flex; /* Utilizamos flexbox para alinear los elementos */
-  flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si no caben en la misma */
-  gap: 20px; /* Espacio entre los elementos */
+  padding: 30px 200px 30px 200px;
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 20px; 
 }
 
 #idNombre, #idAutor, #idGenero, #idClave {
@@ -398,8 +400,8 @@ footer {
   border: none;
   border-radius: 3px;
   padding: 10px;
-  width: 200px; /* Ancho de las cajas de texto */
-  margin-bottom: 10px; /* Añadimos un pequeño margen inferior para separarlos */
+  width: 200px; 
+  margin-bottom: 10px; 
 }
 
 #filtrar {
@@ -409,12 +411,22 @@ footer {
   padding: 10px 20px;
   color: black;
   cursor: pointer;
-  align-self: center; /* Alinea el botón verticalmente en el centro */
+  align-self: center; 
   margin-left: 1500px;
   margin-top: 8px;
+  transition: background-color 0.5s ease;
+  transition: color 0.5s ease;
+}
+
+#filtrar:hover{
+
+background-color: #335D92;
+color: white;
+
+
 }
 
 #idGenero {
-  padding-right: 20px; /* Ajuste para dar espacio en el dropdown */
+  padding-right: 20px; 
 }
 

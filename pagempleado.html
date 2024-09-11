@@ -51,52 +51,26 @@
       
     </nav>       
       
-    <section>
+    <form id="filtro" action="#" method="post">
+      <input id="idNombre" name="nmNombre" type="text" placeholder="Nombre del libro"/>
+      <input id="idAutor" name="nmAutor" type="text" placeholder="Autor"/>
+      <select id="idGenero" name="nmGenero">
+          <option value="" disabled selected>Género</option>
+          <option value="Ficción moderna y contemporánea">Ficción moderna y contemporánea</option>
+          <option value="Ciencia ficción">Ciencia ficción</option>
+          <option value="Novela">Novela</option>
+          <option value="Biografía">Biografía</option>
+      </select>
+      <input id="idClave" name="nmClave" type="text" placeholder="Palabras clave"/>
+      <button id="filtrar" type="button">Filtrar</button>
+  </form>
   
-     <form id="filtro" action="#" method="post">
-
-                <input id="idNombre" name="nmNombre" type="text" placeholder="Nombre del libro" required/> <br> 
-          
-                <input id="idAutor" name="nmAutor" type="text" placeholder="Autor" required/> <br>
-                
-                <select id="idGenero" name="nmGenero" required >
-                  
-                    <option value="" disabled selected> Género </option>
-                  
-                    <option value="cf"> Ciencia ficción </option>
-                  
-                    <option value="a"> Aventuras </option>
-                  
-                    <option value="r"> Romántica </option>
-                  
-                    <option value="f"> Fantasía </option>
-                  
-                    <option value="t"> Terror </option>
-                  
-                    <option value="j"> Juvenil </option>
-                  
-                    <option value="p"> Poesía </option>
-                  
-                    <option value="nh"> Novela histórica </option>
-                  
-                    <option value="fmyc"> Ficción moderna y contemporánea </option>
   
-                </select>
-       
-             <input id="idClave" name="nmClave" type="text" placeholder="Palabras clave" required/> <br>
-       
-      </form>
-       
-    </section>  
-    
-    <section>
-    
-     <ul id="lista">
+  <!-- Lista de Libros -->
 
-     </ul>
-    
-    </section>
-        
+    <ul id="lista"></ul>
+
+ 
       <div id="publi">
       
         <a href="empleadopagos.html"><button id="publicarBoton"> Publicar </button></a>

@@ -8,8 +8,8 @@
 :root{
   
     --blanco : #F7F8FA;
-    --azul : #002B62;
-    --verde : #005B2F;
+    --azul : #EFFFF6;
+    --verde : #335D92;
     --gris : #BABABA;
 }
 
@@ -389,7 +389,17 @@ nav {
   background-color: #BDBDBD;
   border: none;
   font-size: 16px;
+  transition: background-color 0.5s ease;
+  
 }
+
+#estatusss:hover {
+
+background-color: #EFFFF6;
+
+
+}
+
 
 footer {
   
@@ -400,6 +410,7 @@ footer {
   width: 100%;
   margin-top: auto;
 }
+
 
 /*---PAGINA DE COMPRA DE LIBRO---*/
 
@@ -485,3 +496,52 @@ nav {
   margin-top: 20px;
   color:  white;
 }
+
+#filtro {
+  position: relative;
+  background-color: #D9D9D9;
+  top: 180px;
+  padding: 30px 200px 30px 200px; 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 20px; 
+
+}
+
+
+
+#idNombre, #idAutor, #idGenero, #idClave {
+  background-color: #BDBDBD;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  width: 200px; 
+  margin-bottom: 10px; 
+}
+
+#filtrar {
+  background-color: #BDBDBD;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  color: black;
+  cursor: pointer;
+  align-self: center; 
+  margin-left: 1500px;
+  margin-top: 8px;
+  transition: background-color 0.5s ease;
+  transition: color 0.5 ease;
+}
+
+#filtrar:hover {
+
+background-color: #335D92;
+color: white;
+
+
+}
+
+#idGenero {
+  padding-right: 20px; 
+}
+

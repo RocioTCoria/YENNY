@@ -424,6 +424,7 @@ nav {
   margin-left: 150px;
   margin-right: 150px; 
   margin-top: 230px;
+  margin-bottom: 50px;
   font-family: 'Roboto', sans-serif;
   width: 80%;
   display: flex;
@@ -442,6 +443,7 @@ nav {
 }
 
 #nuevasection div {
+
   margin-bottom: 20px;
 }
 
@@ -453,4 +455,33 @@ nav {
 #nuevasection form label {
 
   padding: 10px;
+}
+
+#formDomicilio input {
+
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+
+#continuarDetalles {
+
+  padding: 10px 40px;
+  border-radius: 3px;
+  background-color:#002B62;
+  border: none;
+  margin-top: 20px;
+  color:  white;
+  float: right;
+}
+
+#agregarDomicilioBtn {
+
+  padding: 10px 40px;
+  border-radius: 3px;
+  background-color:#002B62;
+  border: none;
+  margin-top: 20px;
+  color:  white;
 }

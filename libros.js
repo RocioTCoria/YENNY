@@ -96,12 +96,11 @@ function Aviso() {
 
 window.onload = function() {
     var btn = document.getElementById("agregarDomicilioBtn");
-    if (btn) {  // Asegúrate de que el botón existe
+    if (btn) {  
         btn.addEventListener("click", function() {
             console.log("Botón presionado");
             var domicilioForm = document.getElementById("formDomicilio");
 
-            // Mostrar u ocultar el formulario
             if (domicilioForm.style.display === "none" || domicilioForm.style.display === "") {
                 domicilioForm.style.display = "block";
             } else {
@@ -113,26 +112,24 @@ window.onload = function() {
 
 
 function UnaVez(clickedId) {
-   // Obtén todas las casillas de verificación
+
     var checkboxes = document.querySelectorAll('#formEntrega input[type="checkbox"]');
 
-   // Recorre todas las casillas
     checkboxes.forEach(checkbox => {
         if (checkbox.id !== clickedId) {
-           // Si la casilla no es la que se hizo clic, deshabilítala o habilítala
+
             checkbox.disabled = document.getElementById(clickedId).checked;
         }
     });
 }
 
 function Otravez(clickedId) {
-    // Obtén todas las casillas de verificación
+
     var checkboxes = document.querySelectorAll('#formPago input[type="checkbox"]');
 
-    // Recorre todas las casillas
     checkboxes.forEach(checkbox => {
         if (checkbox.id !== clickedId) {
-            // Si la casilla no es la que se hizo clic, deshabilítala o habilítala
+
             checkbox.disabled = document.getElementById(clickedId).checked;
         }
     });

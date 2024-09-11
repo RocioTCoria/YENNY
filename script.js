@@ -81,7 +81,7 @@ function Registro() {
 
     var RegistroValido = true;
 
-    if (mailregistro.includes('@')) {  // aca explico que si el mail no tiene @ le salta el mensaje debajo de que le falta
+    if (mailregistro.includes('@')) { 
 
         Errorregistro.style.display = 'none';
 

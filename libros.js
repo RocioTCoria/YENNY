@@ -114,11 +114,9 @@ function Aviso() {
     } else {
         notificacion.style.display = "none";
     }
-}
 
 // COMPRA.HTML //
 
-window.onload = function() {
     var btn = document.getElementById("agregarDomicilioBtn");
     if (btn) {  
         btn.addEventListener("click", function() {
@@ -157,4 +155,13 @@ function Otravez(clickedId) {
             checkbox.disabled = document.getElementById(clickedId).checked;
         }
     });
-  }
+
+
+
+
+}
+
+
+
+
+

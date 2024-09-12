@@ -115,50 +115,6 @@ function Aviso() {
         notificacion.style.display = "none";
     }
 
-// COMPRA.HTML //
-
-    var btn = document.getElementById("agregarDomicilioBtn");
-    if (btn) {  
-        btn.addEventListener("click", function() {
-            console.log("Botón presionado");
-            var domicilioForm = document.getElementById("formDomicilio");
-
-            if (domicilioForm.style.display === "none" || domicilioForm.style.display === "") {
-                domicilioForm.style.display = "block";
-            } else {
-                domicilioForm.style.display = "none";
-            }
-        });
-    }
-};
-
-
-function UnaVez(clickedId) {
-
-    var checkboxes = document.querySelectorAll('#formEntrega input[type="checkbox"]');
-
-    checkboxes.forEach(checkbox => {
-        if (checkbox.id !== clickedId) {
-
-            checkbox.disabled = document.getElementById(clickedId).checked;
-        }
-    });
-}
-
-function Otravez(clickedId) {
-
-    var checkboxes = document.querySelectorAll('#formPago input[type="checkbox"]');
-
-    checkboxes.forEach(checkbox => {
-        if (checkbox.id !== clickedId) {
-
-            checkbox.disabled = document.getElementById(clickedId).checked;
-        }
-    });
-
-
-
-
 }
 
 

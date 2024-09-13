@@ -146,6 +146,7 @@ body {
     background: linear-gradient(var(--verde) 0px, var(--verde) 170px, var(--blanco) 174px, var(--blanco) 180px, var(--azul) 80px, var(--azul) 100%) 100%/100% no-repeat;
     width: 100%;
     margin:0 auto;
+    font-family: 'Roboto', sans-serif;
 }
 
 .w-90 {
@@ -199,6 +200,14 @@ nav {
   cursor: pointer;
 }
 
+#campana {
+  
+  position: absolute;
+  top: 30px;
+  left: 1630px;
+  cursor: pointer;
+}
+
 #nombreautor {
   
   position: absolute;
@@ -208,13 +217,7 @@ nav {
   
 }
 
-#campana {
-  
-  position: absolute;
-  top: 30px;
-  left: 1630px;
-  cursor: pointer;
-}
+
 
 #propuesta {
   
@@ -442,7 +445,7 @@ color: white;
   left: 1400px;
   padding: 2px 80px;
   border-radius: 3px;
-  background-color: #BDBDBD;
+  background-color: #CDCDCD;
   border: none;
   font-size: 16px;
   transition: background-color 0.5s ease;
@@ -461,7 +464,7 @@ background-color: #EFFFF6;
   left: 1660px;
   padding: 2px 40px;
   border-radius: 3px;
-  background-color: #BDBDBD;
+  background-color: #CDCDCD;
   border: none;
   font-size: 16px;
   transition: background-color 0.5s ease;

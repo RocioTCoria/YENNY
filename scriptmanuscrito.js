@@ -25,4 +25,4 @@ document.getElementById('manuscript-form').addEventListener('submit', function(e
     } else {
         alert('Por favor, sube un archivo PDF.');
     }
-});
+}); 

@@ -39,6 +39,7 @@ header {
     position: absolute;
     top: 10px;
     left: 40px;
+    
 }
 
 .logo-container {
@@ -122,6 +123,7 @@ nav {
     top: 15px;
     left: 1800px;
     cursor: pointer;
+    
 }
 
 #campana {
@@ -146,7 +148,7 @@ nav {
     left: 1400px;
     padding: 2px 80px;
     border-radius: 3px;
-    background-color: #CDCDCD;
+    background-color: #BDBDBD;
     border: none;
     font-size: 16px;
     transition: background-color 0.5s ease;
@@ -164,7 +166,7 @@ nav {
     left: 1660px;
     padding: 2px 40px;
     border-radius: 3px;
-    background-color: #CDCDCD;
+    background-color: #BDBDBD;
     border: none;
     font-size: 16px;
     transition: background-color 0.5s ease;
@@ -182,7 +184,7 @@ nav {
     left: 1170px;
     padding: 2px 80px;
     border-radius: 3px;
-    background-color: #CDCDCD;
+    background-color: #BDBDBD;
     border: none;
     font-size: 16px;
     transition: background-color 0.5s ease;
@@ -193,6 +195,44 @@ nav {
 #estatusss:hover {
     background-color: #EFFFF6;
 }
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+#cerrar-pop-up {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+}
+
+.popup-error {
+    background-color: rgb(255, 0, 0); /* Fondo rojo para errores */
+    color: white;
+}
+
+
 
 footer {
     background-color: var(--verde);

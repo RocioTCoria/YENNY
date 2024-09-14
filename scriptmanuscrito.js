@@ -7,34 +7,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const manuscript = document.getElementById('manuscript').files[0];
 
         if (manuscript && manuscript.type === 'application/pdf') {
-            const reader = new FileReader();
+            // Mostrar el pop-up de éxito
+            const popupMessage = document.getElementById('mensaje-pop-up');
+            popupMessage.querySelector('#pop-up-message').innerText = 'Su Manuscrito fue cargado correctamente.';
+            popupMessage.style.display = 'flex';
 
-            reader.onload = function(e) {
-                const previewSection = document.getElementById('preview-section');
-                const previewDiv = document.getElementById('preview');
-                
-                previewDiv.innerHTML = `
-                    <p><strong>Título:</strong> ${title}</p>
-                    <p><strong>Autor:</strong> ${author}</p>
-                    <embed src="${e.target.result}" type="application/pdf" width="100%" height="600px">
-                `;
-
-                previewSection.style.display = 'block';
-
-                // Mostrar el pop-up de éxito
-                const popupMessage = document.getElementById('mensaje-pop-up');
-                popupMessage.querySelector('#pop-up-message').innerText = 'Su Manuscrito fue cargado correctamente.';
-                popupMessage.style.display = 'flex';
-
-                // Ocultar el pop-up después de 5 segundos
-                setTimeout(function() {
-                    popupMessage.style.display = 'none';
-                }, 5000);
-            };
-
-            reader.readAsDataURL(manuscript);
+            // Ocultar el pop-up después de 5 segundos
+            setTimeout(function() {
+                popupMessage.style.display = 'none';
+            }, 5000);
         } else {
-            // Mostrar un mensaje de error
+            // Mostrar un mensaje de error si el archivo no es PDF
             const popupMessage = document.getElementById('mensaje-pop-up');
             popupMessage.querySelector('#pop-up-message').innerText = 'Solo archivos PDF.';
             popupMessage.classList.add('popup-error');

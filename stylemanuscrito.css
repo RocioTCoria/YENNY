@@ -103,16 +103,7 @@ button:hover {
     color: black;
 }
 
-#preview-section {
-    display: none;
-}
 
-#preview {
-    border: 1px solid ccc;
-    padding: 1em;
-    background-color: #f9f9f9;
-    color: 000;
-}
 
 nav {
     position: relative;
@@ -228,8 +219,8 @@ nav {
 }
 
 .popup-error {
-    background-color: rgb(255, 0, 0); /* Fondo rojo para errores */
-    color: white;
+    
+    color: black;
 }
 
 

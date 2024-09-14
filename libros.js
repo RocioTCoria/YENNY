@@ -115,9 +115,19 @@ function Aviso() {
         notificacion.style.display = "none";
     }
 
+
 }
 
+setTimeout(function() {
 
+    document.getElementById('loading').classList.add('fade-out');
+    
+    
+    setTimeout(function() {
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('contenidoPrincipal').style.display = 'block';
+    }, 200);
+}, 3000);
 
 
 

@@ -1,18 +1,19 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* personalizaciones bootstrap */
+* {
+  font-family: 'Roboto', sans-serif; 
+}
+
 :root {
     --blanco: #F7F8FA;
-    --azul : #EFFFF6;
-    --verde : #335D92;
-    --gris: #BABABA;
+    --azul: #EFFFF6;
+    --verde: #335D92;
+    --gris: #B7B7B7;
 }
 
 body {
-  
     background: linear-gradient(var(--verde) 0px, var(--verde) 170px, var(--blanco) 174px, var(--blanco) 180px, var(--azul) 80px, var(--azul) 100%) 100%/100% no-repeat;
-    width: 100%;
-    margin: 0 auto;
     width: 100%;
     margin: 0;
     color: white;
@@ -24,7 +25,6 @@ body {
 }
 
 header {
-  
     background: var(--verde);
     color: white;
     padding: 1em 0;
@@ -35,16 +35,24 @@ header {
     width: 100%;
 }
 
-
 #logo {
-  
     position: absolute;
     top: 10px;
     left: 40px;
+    
+}
+
+.logo-container {
+    width: 150px;
+    position: relative;
+    margin: 30px auto;
+}
+
+.logo-container img {
+    width: 100%;
 }
 
 main {
-  
     flex: 1;
     display: flex;
     justify-content: center;
@@ -54,7 +62,6 @@ main {
 }
 
 #main-content {
-  
     background-color: var(--gris);
     padding: 2em;
     border-radius: 10px;
@@ -65,121 +72,164 @@ main {
 }
 
 section {
-  
     margin-bottom: 1.5em;
 }
 
 label {
-  
     display: block;
     margin-bottom: 0.5em;
 }
 
 input[type="text"], input[type="file"] {
-  
     width: 100%;
     padding: 0.5em;
     margin-bottom: 1em;
 }
 
 button {
-  
     padding: 0.7em 1.5em;
-    background-color: #627FA5;
+    background-color: #335D92;
     color: white;
     border: 10px;
     cursor: pointer;
     font-size: 1em;
     border-radius: 4px;
+    transition: background-color 0.5s ease;
+    transition: color 0.5s ease;
 }
 
 button:hover {
-  
-    background-color: #95BFF6;
+    background-color: #EFFFF6;
+    color: black;
 }
 
+
+
+nav {
+    position: relative;
+}
+
+#fotoperfil {
+    position: absolute;
+    top: 15px;
+    left: 1800px;
+    cursor: pointer;
+    
+}
+
+#campana {
+    position: absolute;
+    top: 30px;
+    left: 1630px;
+    cursor: pointer;
+}
+
+#nombreautor {
+    position: absolute;
+    margin-top: 30px;
+    left: 1688px;
+    color: white;
+    font-size: 32px;
+    font-weight: 400 !important;
+}
+
+#propuesta {
+    position: absolute;
+    top: 120px;
+    left: 1400px;
+    padding: 2px 80px;
+    border-radius: 3px;
+    background-color: #BDBDBD;
+    border: none;
+    font-size: 16px;
+    transition: background-color 0.5s ease;
+    color: black;
+    height: 28px;
+}
+
+#propuesta:hover {
+    background-color: #EFFFF6;
+}
+
+#cargarmanu {
+    position: absolute;
+    top: 120px;
+    left: 1660px;
+    padding: 2px 40px;
+    border-radius: 3px;
+    background-color: #BDBDBD;
+    border: none;
+    font-size: 16px;
+    transition: background-color 0.5s ease;
+    color: black;
+    height: 28px;
+}
+
+#cargarmanu:hover {
+    background-color: #EFFFF6;
+}
+
+#estatusss {
+    position: absolute;
+    top: 120px;
+    left: 1170px;
+    padding: 2px 80px;
+    border-radius: 3px;
+    background-color: #BDBDBD;
+    border: none;
+    font-size: 16px;
+    transition: background-color 0.5s ease;
+    color: black;
+    height: 28px;
+}
+
+#estatusss:hover {
+    background-color: #EFFFF6;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+#cerrar-pop-up {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+}
+
+.popup-error {
+    
+    color: black;
+}
+
+
+
 footer {
-  
     background-color: var(--verde);
     color: white;
     text-align: center;
     padding: 1em 0;
     width: 100%;
     margin-top: auto;
-}
-
-#preview-section {
-  
-    display: none;
-}
-
-#preview {
-  
-    border: 1px solid ccc;
-    padding: 1em;
-    background-color: #f9f9f9;
-    color: 000;
-}
-
-#fotoperfil {
-  
-  position: absolute;
-  top: 15px;
-  left: 1800px;
-  cursor: pointer;
-}
-
-#nombreautor {
-  
-  position: absolute;
-  top: 20px;
-  left: 1688px;
-  color: white;
-  font-size: 30px;
-  
-}
-
-#campana {
-  
-  position: absolute;
-  top: 35px;
-  left: 1630px;
-  cursor: pointer;
-}
-
-#propuesta {
-  
-  position: absolute;
-  top: 120px;
-  left: 1400px;
-  padding: 5px 80px;
-  border-radius: 3px;
-  background-color: #BDBDBD;
-  border: none;
-  color: black;
-}
-
-#cargarmanu {
-  
-  position: absolute;
-  top: 120px;
-  left: 1660px;
-  padding: 5px 40px;
-  border-radius: 3px;
-  background-color: #BDBDBD;
-  border: none;
-  color: black;
-}
-
-#estatusss {
-  
-  position: absolute;
-  top: 120px;
-  left: 1145px;
-  padding: 5px 90px;
-  border-radius: 3px;
-  background-color: #BDBDBD;
-  border: none;
-  font-size: 16px;
-  color: black;
 }

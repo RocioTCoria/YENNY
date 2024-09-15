@@ -109,6 +109,11 @@ body {
     border-radius: 3px;
     background-color: #BDBDBD;
     border: none;
+    transition: background-color 0.5s ease;
+}
+
+#propuesta:hover {
+    background-color: #EFFFF6;
 }
 
 #cargarmanu {
@@ -119,7 +124,13 @@ body {
     border-radius: 3px;
     background-color: #BDBDBD;
     border: none;
+    transition: background-color 0.5s ease;
 }
+
+#cargarmanu:hover {
+    background-color: #EFFFF6;
+}
+
 
 #estatusss {
   
@@ -131,6 +142,11 @@ body {
   background-color: #BDBDBD;
   border: none;
   font-size: 16px;
+  transition: background-color 0.5s ease;
+}
+
+#estatusss:hover {
+    background-color: #EFFFF6;
 }
 
 #ubicar {

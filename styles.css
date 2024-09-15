@@ -272,6 +272,11 @@ input[type="checkbox"]{
   border: none;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+#propuesta:hover {
+    background-color: #EFFFF6;
 }
 
 #cargarmanu {
@@ -285,6 +290,11 @@ input[type="checkbox"]{
   border: none;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+#cargarmanu:hover {
+    background-color: #EFFFF6;
 }
 
 #estatusss {
@@ -298,7 +308,11 @@ input[type="checkbox"]{
   border: none;
   font-size: 16px;
   cursor: pointer;
-  
+  transition: background-color 0.5s ease;
+}
+
+#estatusss:hover {
+    background-color: #EFFFF6;
 }
 
 footer {

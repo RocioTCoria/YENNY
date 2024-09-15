@@ -82,9 +82,9 @@ window.onload = function() {
             elemento.appendChild(escritor);
             if (libro.genero) elemento.appendChild(genero);
             if (libro.clave) elemento.appendChild(palabrasClave);
-            elemento.appendChild(boton); // Botón "Comprar"
-            elemento.appendChild(botonEstatus); // Botón "Estatus"
-            elemento.appendChild(img); // Imagen
+            elemento.appendChild(boton);
+            elemento.appendChild(botonEstatus); 
+            elemento.appendChild(img); 
 
             // Añadir la clase para estilos
             elemento.classList.add("Libros");
@@ -108,9 +108,8 @@ window.onload = function() {
         mostrarLibros(librosFiltrados);
     }
 
-    // Mostrar todos los libros al cargar la página
+    
     mostrarLibros(originalLibros);
 
-    // Añadir evento al botón de filtrar
     document.getElementById("filtrar").addEventListener("click", filtrarLibros);
 };

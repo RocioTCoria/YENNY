@@ -8,9 +8,9 @@
 :root{
   
     --blanco : #F7F8FA;
-    --azul : #002B62;
-    --verde : #005B2F;
-    --gris : #BABABA;
+    --azul : #EFFFF6;
+    --verde : #335D92;
+    --gris : #B7B7B7;
 }
 
 body {
@@ -303,6 +303,11 @@ input[type="checkbox"]{
   border: none;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+#propuesta:hover {
+    background-color: #EFFFF6;
 }
 
 #cargarmanu {
@@ -316,6 +321,11 @@ input[type="checkbox"]{
   border: none;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+#cargarmanu:hover {
+    background-color: #EFFFF6;
 }
 
 #estatusss {
@@ -329,7 +339,11 @@ input[type="checkbox"]{
   border: none;
   font-size: 16px;
   cursor: pointer;
-  
+  transition: background-color 0.5s ease;
+}
+
+#estatusss:hover {
+    background-color: #EFFFF6;
 }
 
 #infoCompra img {
@@ -359,3 +373,4 @@ footer {
   width: 100%;
   margin-top: 300px;
 }
+

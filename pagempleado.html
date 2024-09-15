@@ -20,9 +20,14 @@
   <title>YENNY</title>
   
 </head>
-  
+
   <body>
-  
+
+    <div id="loading" class="loading">
+      <img src="img/74SX.gif" alt="Cargando..." class="loading-gif">
+  </div>
+
+  <div id="contenidoPrincipal" style="display:none;">
     <nav>   
       
         <a href="#" >
@@ -30,18 +35,18 @@
           <img id="logo" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/logo.png?v=1717799493674" alt="Logo YENNY" title="logo YENNY" width="8%"/>
   
           <h2 id="nombreautor"> Diego </h2>
-          
+
           <img id="fotoperfil" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/gatito.png?v=1717802499885" alt="Foto de perfil" title="foto de perfil YENNY" width="4%"/>
-           
+
         </a>
       
           <img onclick="Aviso()" id="campana" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/campa.png?v=1717864364937" alt="campana de notificación" width="2%" title="campana de notificaciones"/>
       
-          <div id="notificacion"> 
+          <div id="notificacion" style="display: none;"> 
           
-           <p id="mensaje"> Su manuscrito se ha subido con éxito. </p> 
+          <p id="mensaje"> Su manuscrito se ha subido con éxito. </p> 
         
-         </div>
+        </div>
       
           <a href="status.html"> <button id="estatusss"> Estatus </button> </a>
       
@@ -51,62 +56,40 @@
       
     </nav>       
       
-    <section>
+    <form id="filtro" action="#" method="post">
+      <input id="idNombre" name="nmNombre" type="text" placeholder="Nombre del libro"/>
+      <input id="idAutor" name="nmAutor" type="text" placeholder="Autor"/>
+      <select id="idGenero" name="nmGenero">
+          <option value="" disabled selected>Género</option>
+          <option value="Ficción moderna y contemporánea">Ficción moderna y contemporánea</option>
+          <option value="Ciencia ficción">Ciencia ficción</option>
+          <option value="Novela">Novela</option>
+          <option value="Biografía">Biografía</option>
+      </select>
+      <input id="idClave" name="nmClave" type="text" placeholder="Palabras clave"/>
+      <button id="filtrar" type="button">Filtrar</button>
+  </form>
   
-     <form id="filtro" action="#" method="post">
-
-                <input id="idNombre" name="nmNombre" type="text" placeholder="Nombre del libro" required/> <br> 
-          
-                <input id="idAutor" name="nmAutor" type="text" placeholder="Autor" required/> <br>
-                
-                <select id="idGenero" name="nmGenero" required >
-                  
-                    <option value="" disabled selected> Género </option>
-                  
-                    <option value="cf"> Ciencia ficción </option>
-                  
-                    <option value="a"> Aventuras </option>
-                  
-                    <option value="r"> Romántica </option>
-                  
-                    <option value="f"> Fantasía </option>
-                  
-                    <option value="t"> Terror </option>
-                  
-                    <option value="j"> Juvenil </option>
-                  
-                    <option value="p"> Poesía </option>
-                  
-                    <option value="nh"> Novela histórica </option>
-                  
-                    <option value="fmyc"> Ficción moderna y contemporánea </option>
   
-                </select>
-       
-             <input id="idClave" name="nmClave" type="text" placeholder="Palabras clave" required/> <br>
-       
-      </form>
-       
-    </section>  
-    
-    <section>
-    
-     <ul id="lista">
 
-     </ul>
-    
-    </section>
-        
-      <div id="publi">
-      
-        <a href="empleadopagos.html"><button id="publicarBoton"> Publicar </button></a>
-      
-      </div>
+   
+  <a href="empleadopagos.html"><button id="publicarBoton"> Publicar </button></a>
 
-  <footer>
+  <!-- Lista de Libros -->
+   
+    <ul id="lista"></ul>
+
+ 
+
+      
+
+    <footer>
+
         <p>&copy; 2024 YENNY</p>
-     
+
     </footer>
+  </div>
     
   </body>
+
 </html>

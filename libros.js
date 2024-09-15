@@ -36,7 +36,7 @@ window.onload = function() {
 
     function mostrarLibros(librosFiltrados) {
         lista.innerHTML = ""; // Limpia la lista actual
-        librosFiltrados.forEach(libro => {
+        librosFiltrados.forEach((libro,index) => {
             var elemento = document.createElement("li");
 
             var titulo = document.createElement("h3");
@@ -66,7 +66,7 @@ window.onload = function() {
 
             var boton = document.createElement("a");
             boton.textContent = "Comprar";
-            boton.href = "compra.html";
+            boton.href = "compra.html?"+index;
             boton.classList.add("boton");
 
             elemento.appendChild(titulo);

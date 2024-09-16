@@ -69,13 +69,16 @@ window.onload = function() {
             boton.href = "compra.html";
             boton.classList.add("boton");
 
-            // Botón "Estatus"
+           // Botón "Estatus"
             var botonEstatus = document.createElement("a");
             botonEstatus.href = "statusWriter.html";
             var botonInterno = document.createElement("button");
-            botonInterno.id = "estatus";
+            botonInterno.id = "boton";
             botonInterno.textContent = "Estatus";
+            botonInterno.classList.add("boton");  // Añade la clase 'boton' aquí
             botonEstatus.appendChild(botonInterno);
+
+
 
             // Añadir elementos al contenedor
             elemento.appendChild(titulo);

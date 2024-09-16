@@ -1,4 +1,3 @@
-// El array original de libros
 var libros = [
     {
         "titulo": "Comentarios al Náucrato",
@@ -32,11 +31,13 @@ var libros = [
 
 window.onload = function() {
     var lista = document.getElementById("lista");
-    var originalLibros = [...libros]; // Copia el array de libros original
+    var originalLibros = [...libros];
 
     function mostrarLibros(librosFiltrados) {
-        lista.innerHTML = ""; // Limpia la lista actual
+
+        lista.innerHTML = ""; 
         librosFiltrados.forEach((libro,index) => {
+
             var elemento = document.createElement("li");
 
             var titulo = document.createElement("h3");
@@ -64,18 +65,33 @@ window.onload = function() {
             img.alt = libro.titulo || "Imagen no disponible";
             img.classList.add("foto");
 
+            // Botón "Comprar"
             var boton = document.createElement("a");
             boton.textContent = "Comprar";
             boton.href = "compra.html?"+index;
             boton.classList.add("boton");
 
+           // Botón "Estatus"
+            var botonEstatus = document.createElement("a");
+            botonEstatus.href = "statusWriter.html";
+            var botonInterno = document.createElement("button");
+            botonInterno.id = "boton";
+            botonInterno.textContent = "Estatus";
+            botonInterno.classList.add("boton");  // Añade la clase 'boton' aquí
+            botonEstatus.appendChild(botonInterno);
+
+
+
+            // Añadir elementos al contenedor
             elemento.appendChild(titulo);
             elemento.appendChild(escritor);
             if (libro.genero) elemento.appendChild(genero);
             if (libro.clave) elemento.appendChild(palabrasClave);
             elemento.appendChild(boton);
-            elemento.appendChild(img);
+            elemento.appendChild(botonEstatus); 
+            elemento.appendChild(img); 
 
+            // Añadir la clase para estilos
             elemento.classList.add("Libros");
             lista.appendChild(elemento);
         });
@@ -87,7 +103,6 @@ window.onload = function() {
         var genero = document.getElementById("idGenero").value.toLowerCase().trim();
         var clave = document.getElementById("idClave").value.toLowerCase().trim();
 
-        // Filtrar los libros según los valores ingresados
         var librosFiltrados = originalLibros.filter(libro => {
             return (!nombre || libro.titulo.toLowerCase().includes(nombre)) &&
                    (!autor || libro.escritor.toLowerCase().includes(autor)) &&
@@ -95,15 +110,14 @@ window.onload = function() {
                    (!clave || libro.clave.toLowerCase().includes(clave));
         });
 
-        // Mostrar los libros filtrados
         mostrarLibros(librosFiltrados);
     }
 
-    // Mostrar todos los libros inicialmente
+    
     mostrarLibros(originalLibros);
 
-    // Añadir evento al botón de filtrar
     document.getElementById("filtrar").addEventListener("click", filtrarLibros);
+
 };
 
 // Función para mostrar y ocultar la notificación
@@ -128,6 +142,5 @@ setTimeout(function() {
         document.getElementById('contenidoPrincipal').style.display = 'block';
     }, 200);
 }, 3000);
-
 
 

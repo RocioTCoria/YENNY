@@ -77,7 +77,7 @@ window.onload = function() {
             var botonInterno = document.createElement("button");
             botonInterno.id = "boton";
             botonInterno.textContent = "Estatus";
-            botonInterno.classList.add("boton");  // Añade la clase 'boton' aquí
+            botonInterno.classList.add("boton");
             botonEstatus.appendChild(botonInterno);
 
 

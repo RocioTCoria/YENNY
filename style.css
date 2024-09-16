@@ -10,7 +10,7 @@
     --blanco : #F7F8FA;
     --azul : #EFFFF6;
     --verde : #335D92;
-    --gris : #BABABA;
+    --gris : #B7B7B7;
 }
 
 #emailError {
@@ -224,6 +224,17 @@ nav {
   cursor: pointer;
 }
 
+#mensaje {
+    position: absolute;
+    background-color: #6A9B83;
+    top: 100px;
+    left: 1510px;
+    padding: 15px 20px 15px 15px;
+    border-radius: 5px;
+    transition: top 0.5s ease;
+    z-index: 2;
+}
+
 #propuesta {
   
   position: absolute;
@@ -234,6 +245,13 @@ nav {
   background-color: #BDBDBD;
   border: none;
   font-size: 16px;
+  transition: background-color 0.5s ease;
+}
+
+#propuesta:hover{
+
+background-color: #EFFFF6;
+
 }
 
 #cargarmanu {
@@ -246,6 +264,13 @@ nav {
   background-color: #BDBDBD;
   border: none;
   font-size: 16px;
+  transition: background-color 0.5s ease;
+}
+
+#cargarmanu:hover{
+
+background-color: #EFFFF6;
+
 }
 
 #filtro {
@@ -314,8 +339,8 @@ nav {
 
 #publi {
   
-  background-color: #002B62;
-  height: 100px;
+  background-color: #335D92;
+  height: 20px;
   
 }
 
@@ -329,7 +354,16 @@ nav {
   background-color: #BDBDBD;
   border: none;
   margin-top: 20px;
-  
+  transition: backgroundcolor 0.5s ease;
+  color: black;
+  transition: color 0.5s ease;
+}
+
+#publicarBoton:hover{
+
+  background-color: #44617D;
+  color: white;
+
 }
 
 #filtro1 {
@@ -369,13 +403,14 @@ nav {
 #mensaje {
   
   position: absolute;
-  background-color: #6A9B83;
+  background-color: #44617D;
   top: 100px;
   left: 1510px;
   padding: 15px 20px 15px 15px;
   border-radius: 5px;
   transition: top 0.5s ease;
   z-index: 2;
+  color:white;
   
 }
 
@@ -401,15 +436,7 @@ background-color: #EFFFF6;
 }
 
 
-footer {
-  
-  background-color: var(--verde);
-  color: white;
-  text-align: center;
-  padding: 1em 0;
-  width: 100%;
-  margin-top: auto;
-}
+
 
 
 /*---PAGINA DE COMPRA DE LIBRO---*/
@@ -575,5 +602,45 @@ color: white;
 
   width: 200px;
   height: auto;
+}
+
+
+/* Cambiar color de los fondos grises a #B7B7B7 */
+  .Libros, #filtro {
+  background-color: #B7B7B7; 
+}
+
+/* Cambiar color de los botones y contenedores de texto a #CDCDCD */
+#filtrar, #publicarBoton, .form-control, #idNombre, #idAutor, #idGenero,#idClave{
+
+  background-color: #CDCDCD;
+}
+
+.boton{
+
+  background-color: #44617D;
+  color: white;
+  transition: background-color 0.8s ease;
+  transition: color 0.8s ease;
 
 }
+
+.boton:hover{
+
+background-color: #EFFFF6;
+color:black;
+
+}
+
+footer {
+  
+  background-color: var(--verde);
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  width: 100%;
+  margin-top: 5%;
+padding: 3%;
+
+}
+

@@ -10,7 +10,7 @@
     --blanco : #F7F8FA;
     --azul : #EFFFF6;
     --verde : #335D92;
-    --gris : #BABABA;
+    --gris : #B7B7B7;
 }
 
 body {
@@ -53,6 +53,19 @@ body {
   left: 1630px;
   cursor: pointer;
 }
+
+
+#mensaje {
+    position: absolute;
+    background-color: #6A9B83;
+    top: 100px;
+    left: 1510px;
+    padding: 15px 20px 15px 15px;
+    border-radius: 5px;
+    transition: top 0.5s ease;
+    z-index: 2;
+}
+
 
 .header {
     
@@ -136,6 +149,14 @@ body {
     justify-content: center;
 }
 
+.gray-bg{
+  width:60%;
+  margin:200px auto;
+  background-color: var(--gris);
+  border-radius:5px;
+  display:block;
+}
+
 .checkbox-content{
   
     padding: 10px 20px 0px;
@@ -182,6 +203,18 @@ body {
     width:48%;
     margin-right:2%;
     float:left;
+}
+
+.col-25{
+  width:23%;
+  margin-right:2%;
+  float:left;
+}
+
+.col-75{
+  width:73%;
+  margin-right:2%;
+  float:left;
 }
 
 .form-container .file-input-container {
@@ -270,6 +303,11 @@ input[type="checkbox"]{
   border: none;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+#propuesta:hover {
+    background-color: #EFFFF6;
 }
 
 #cargarmanu {
@@ -283,6 +321,11 @@ input[type="checkbox"]{
   border: none;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+#cargarmanu:hover {
+    background-color: #EFFFF6;
 }
 
 #estatusss {
@@ -296,7 +339,103 @@ input[type="checkbox"]{
   border: none;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+#estatusss:hover {
+    background-color: #EFFFF6;
+}
+
+#infoCompra img {
+  width:100%
+}
+
+#tapa{
+  margin-top:20px;
+}
+
+.boton {
   
+  background-color: var(--verde);
+  border: none;
+  border-radius: 5px;
+  padding: 8px 35px;
+  color: white;
+  text-decoration: none; 
+}
+
+.chat-block{
+  position:fixed;
+  bottom:0;
+  right:50px;
+  z-index:10;
+  width:500px;
+}
+
+
+.chat-boton{
+  position: absolute;
+  bottom:10px;
+  z-index:100;
+  width:100px;
+  right: 0px;
+}
+
+.chat-boton img{
+  width:100%;
+}
+
+.chat-pop{
+  position:absolute;
+  width:80%;
+  height:400px;
+  overflow-y: scroll;
+  background-color: var(--blanco);
+  border:1px solid var(--gris);
+  border-radius: 5px;
+  bottom:90px;
+  right: 70px;
+  z-index:110;
+  display:none;
+}
+
+.chat-input {
+  width: 80%;
+  position:absolute;
+  bottom:60px;
+  z-index:200;
+  display:none;
+}
+
+.chat-input input[type="number"]{
+  width: 70%;
+  border-radius: 5px;
+  border: 2px solid var(--verde);
+  margin-left: 6.5%;
+  height: 20px;
+}
+
+.chat-input button{
+  width:20%;
+}
+
+.bot{
+  background-color: var(--verde);
+  color:var(--blanco);
+  padding:5px;
+  margin-left:2%;
+  margin-right: 6%;
+  border-radius: 5px;
+}
+
+.person{
+  background-color: var(--gris);
+  color:var(--blanco);
+  padding:5px;
+  margin-left:50%;
+  margin-right: 2%;
+  border-radius: 5px;
+  text-align:right;
 }
 
 footer {
@@ -308,3 +447,4 @@ footer {
   width: 100%;
   margin-top: 300px;
 }
+

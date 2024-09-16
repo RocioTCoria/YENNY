@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
   
     <script src="Routes.js" type="text/javascript"></script>
+    <script src="chat.js" type="text/javascript"></script>
   
 </head>
 <body>
@@ -72,6 +73,23 @@
     </div>
     
   </section>
+
+  <div id="" class="chat-block">
+    <div id="chatBox" class="chat-pop">
+      <p class="bot">Hola, soy YENNY <br> Actualmente tu libro se encuentra en REVISIÓN, dime como puedo ayudarte... <br><br> 1. ¿Cuanto tarda esta etapa? <br><br> 2. ¿Tengo que modificar algo en esta etapa? <br><br> 3. Quiero dar de baja mi proceso de revision.  </p>
+      
+    </div>
+    <div id="chatInput" class="chat-input">
+      <input id="chat" type="number" name="content">
+      <button onclick="enviarResp()">Enviar</button>
+    </div>
+    <div class="chat-boton">
+      <a onclick="mostrar()"><img src="img/chat.png"></a>
+    </div>
+    
+  </div>
+
+  
   
   <footer>
         <p>&copy; 2024 YENNY</p>

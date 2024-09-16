@@ -8,35 +8,26 @@
     <meta name="robots" content="https://www.yenny-elateneo.com/"/>
     <meta name="author" content="equipocomodin@gmail.com"/>
     <meta name="publisher" content="YENNY"/>
-  
+    <script src="scriptmanuscrito.js" defer></script>
     <title>YENNY - Manuscrito</title>
     <link rel="stylesheet" href="stylemanuscrito.css">
 </head>
 <body>
-    
-    <header>
-      <a href="pagempleado.html"> 
-        
-         <img src="https://cdn.glitch.global/61ef4789-c57a-4251-8609-dfc71fdbab0f/logo.png?v=1717958032155" alt="Logo de YENNY" id="logo" width="8%" title="logo YENNY">
-        
-         <h2 id="nombreautor"> Diego </h2>
-        
-         <img id="campana" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/campa.png?v=1717864364937" alt="campana de notificación" width="2%" title="campana de notificaciones"/>
-        
-         <img id="fotoperfil" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/gatito.png?v=1717802499885" alt="Foto de perfil" width="4%" title="foto de perfil"/>
-        
+    <nav>
+        <a href="#"> 
+            <img id="logo" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/logo.png?v=1717799493674" alt="Logo YENNY" width="8%" title="logo YENNY"/>
+            <h2 id="nombreautor"> Diego </h2>
+            <img id="fotoperfil" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/gatito.png?v=1717802499885" alt="Foto de perfil" width="4%" title="foto de perfil"/>
         </a>
-      
-        <a href="status.html"> <button id="estatusss"> Estatus </button> </a>  
-      
+        <img id="campana" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/campa.png?v=1717864364937" alt="campana de notificación" width="2%" title="campana de notificaciones"/>
+        <a href="status.html"> <button id="estatusss"> Estatus </button> </a>      
         <a href="estado.html"> <button id="propuesta"> Propuestas </button> </a>
-      
         <a href="manuscrito.html"> <button id="cargarmanu"> Cargar manuscrito </button> </a>
-        
-    </header>
+    </nav> 
 
     <main>
         <div id="main-content">
+            <!-- Formulario de carga -->
             <section id="upload-section">
                 <h2>Subir Manuscrito</h2>
                 <form id="manuscript-form">
@@ -54,19 +45,21 @@
                 <p id="success-message" style="display: none;">Su manuscrito se ha subido con éxito.</p>
 
             </section>
-            
-            <section id="preview-section">
-                <h2>Vista Previa</h2>
-                <div id="preview"></div>
-            </section>
+
+            <!-- Modal pop-up -->
+            <div id="mensaje-pop-up" class="popup-overlay" style="display: none;">
+                <div class="popup-content">
+                    <span id="cerrar-pop-up">&times;</span>
+                    <p id="pop-up-message">Su Manuscrito fue cargado correctamente.</p>
+                </div>
+            </div>
+
+          
         </div>
     </main>
 
     <footer>
         <p>&copy; 2024 YENNY</p>
-     
     </footer>
-
-    <script src="scriptmanuscrito.js"></script>
 </body>
 </html>

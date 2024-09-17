@@ -16,10 +16,10 @@
 <a href="https://www.figma.com/design/x2wgzXkN4cuzudBU5wR7gg/Untitled?node-id=0-1&t=Bh56EMZMXGevuXG1-0" target="_blank"> Manual de Marca </a>
 <p>Explicación del logo.</p>
 
-<a href="[https://www.figma.com/design/x2wgzXkN4cuzudBU5wR7gg/Untitled?node-id=0-1&t=Bh56EMZMXGevuXG1-0](https://docs.google.com/spreadsheets/d/1TsjiZQOwwUZh4opOhW37SMYAa2L2qq-kEpzd2ktKLgg/edit?usp=sharing)" target="_blank"> MVP y GANTT </a>
+<a href="https://www.figma.com/design/x2wgzXkN4cuzudBU5wR7gg/Untitled?node-id=0-1&t=Bh56EMZMXGevuXG1-0](https://docs.google.com/spreadsheets/d/1TsjiZQOwwUZh4opOhW37SMYAa2L2qq-kEpzd2ktKLgg/edit?usp=sharing)" target="_blank"> MVP y GANTT </a>
 <p>Importancia y tareas</p>
 
-<a href="[https://www.figma.com/design/x2wgzXkN4cuzudBU5wR7gg/Untitled?node-id=0-1&t=Bh56EMZMXGevuXG1-0](https://docs.google.com/spreadsheets/d/1TsjiZQOwwUZh4opOhW37SMYAa2L2qq-kEpzd2ktKLgg/edit?usp=sharing)" target="_blank"> Mapa de Empatia </a>
+<a href="https://www.figma.com/design/x2wgzXkN4cuzudBU5wR7gg/Untitled?node-id=0-1&t=Bh56EMZMXGevuXG1-0](https://docs.google.com/spreadsheets/d/1TsjiZQOwwUZh4opOhW37SMYAa2L2qq-kEpzd2ktKLgg/edit?usp=sharing)" target="_blank"> Mapa de Empatia </a>
 <p>Interes del usuario</p>
 </body>
 </html>

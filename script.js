@@ -33,38 +33,44 @@ function Ingresar(){
     var Error = document.getElementById("emailError");
     var Error2 = document.getElementById("contraseñaError");
 
-    if (mail.includes('@')) {
+    Error.style.display = 'none';
+    Error2.style.display = 'none';
 
-        Error.style.display = 'none';
+    var valid = true;
 
-    } else {
+    if (!mail.includes('@')) {
 
         Error.style.display = 'block';
+        valid = false;
     }
 
-    if (contraseña.length<1) {
 
-        Error2.style.display = 'none';
-
-    } else {
+    if (contraseña.length < 1) {
 
         Error2.style.display = 'block';
+        valid = false;
     }
 
-    for (let index = 0; index < usuarios.length; index++) {
-        if (usuarios[index].contraseña == contraseña && usuarios[index].mail ==  mail  ) {
-            if (usuarios[index].rol==1) {
-                login.setAttribute('action' , 'pagautor.html')
+
+    if (valid) {
+
+        for (let index = 0; index < usuarios.length; index++) {
+
+            if (usuarios[index].contraseña == contraseña && usuarios[index].mail == mail) {
+                if (usuarios[index].rol == 1) {
+                    login.setAttribute('action', 'pagautor.html');
+                }
+                if (usuarios[index].rol == 2) {
+                    login.setAttribute('action', 'pagempleado.html');
+                }
+                login.submit();
+                return; 
             }
-            if (usuarios[index].rol==2) {
-                login.setAttribute('action' , 'pagempleado.html')
-            }
-            login.submit();
-            return; 
         }
-        
-    }
 
+        Error2.style.display = 'block';
+        Error2.textContent = 'Correo o contraseña incorrectos';
+    }
 }
 
 // register.html //

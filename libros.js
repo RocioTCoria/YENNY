@@ -80,8 +80,6 @@ window.onload = function() {
             botonInterno.classList.add("boton");
             botonEstatus.appendChild(botonInterno);
 
-
-
             // Añadir elementos al contenedor
             elemento.appendChild(titulo);
             elemento.appendChild(escritor);
@@ -142,5 +140,3 @@ setTimeout(function() {
         document.getElementById('contenidoPrincipal').style.display = 'block';
     }, 200);
 }, 3000);
-
-

@@ -73,7 +73,7 @@ window.onload = function() {
 
            // Botón "Estatus"
             var botonEstatus = document.createElement("a");
-            botonEstatus.href = "statusWriter.html";
+            botonEstatus.href = "status.html";
             var botonInterno = document.createElement("button");
             botonInterno.id = "boton";
             botonInterno.textContent = "Estatus";

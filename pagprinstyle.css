@@ -88,13 +88,26 @@ form {
     background-color: #BABABA;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
     padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
 }
 
+.mismocss {
+    
+    background-color: #DDDDDD;
+    border: none;
+    border-radius: 8px;
+    padding: 5px 50px 5px 10px;
+    width: 200px;
+    margin-left: 30px; 
 
+}
 
 #filtrar {
 
-    background-color: #CDCDCD;
+    background-color: #DDDDDD;
     border: none;
     border-radius: 8px;
     padding: 5px 18px;
@@ -103,6 +116,14 @@ form {
     align-self: center;
     transition: background-color 0.5s ease;
     transition: color 0.5 ease;
+    margin-left: 30px; 
+}
+
+#filtrar:hover {
+
+    background-color: #335D92;
+    color: white;
+    
 }
 
 

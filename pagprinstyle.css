@@ -1,2 +1,50 @@
 /*--- Nuevo CSS para pagina principal---*/
 
+body {
+
+    background-color: #EFFFF6;
+}
+
+nav {
+
+    background: linear-gradient(to top, #002B62, #335D92);
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: flex-start; /* Alinea el contenido en la parte superior */
+    height: 150px;
+    position: relative;
+    padding: 20px;
+}
+
+#logo {
+
+    width: 120px;
+    max-width: 100%; 
+}
+
+#fotoperfil {
+
+
+}
+
+form {
+
+    background-color: #BABABA;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+
+    background-color: #335D92;
+    color: #EFFFF6;;
+}
+
+.boton {
+
+    background-color: #EFFFF6;
+    border-radius: 6px;
+    padding: 5px 12px;
+    border: none;
+}
+
+

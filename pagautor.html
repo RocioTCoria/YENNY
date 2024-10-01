@@ -36,23 +36,35 @@
 
         </a>
 
-        <h2 id="nombreautor"> Ghami </h2>
+        <div class="elementosaladerecha">
 
-        <img id="fotoperfil" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/ea.png?v=1717891692208" alt="Foto de perfil" width="4%" title="foto de perfil"/>
+          <div class="arriba">
 
-        <img onclick="Aviso()" id="campana" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/campa.png?v=1717864364937" alt="campana de notificación" width="2%" title="campana de notificaciones"/>
+            <img onclick="Aviso()" id="campana" class="item" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/campa.png?v=1717864364937" alt="campana de notificación" title="campana de notificaciones" />
+      
+              <div id="notificacion" style="display: none;"> 
           
-          <div id="notificacion" style="display: none;"> 
+                <p id="mensaje"> Su manuscrito se ha subido con éxito. </p> 
+      
+              </div>
+
+            <h2 id="nombreautor" class="item">Ghami</h2>
+      
+            <img id="fotoperfil" class="item" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/ea.png?v=1717891692208" alt="Foto de perfil" title="foto de perfil" />
+
+          </div>
+      
+          <div class="abajo">
+
+            <a href="cargarLibro.html"> <button id="cargarlibro" class="boton">Cargar libro</button> </a>
+      
+            <a href="statusWriter.html"> <button id="cargarlibro" class="boton">Estatus</button> </a>
+      
+            <a href="index.html"> <button id="cargarlibro" class="boton">Cerrar Sesión</button> </a> <!--Hacer una ventana de ¿Estas seguro de cerrar sesion?-->
           
-            <p id="mensaje"> Su manuscrito se ha subido con éxito. </p> 
-        
           </div>
 
-          <a href="cargarLibro.html"> <button id="cargarlibro" class="boton"> Cargar libro </button> </a>
-
-          <a href="statusWriter.html"> <button id="cargarlibro" class="boton"> Estatus </button> </a>
-
-          <a href="index.html"> <button id="cargarlibro" class="boton"> Cerrar Sesión </button> </a> <!--Hacer una ventana de ¿Estas seguro de cerrar sesion?-->
+        </div> 
           
     </nav>
       

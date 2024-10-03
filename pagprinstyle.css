@@ -43,6 +43,7 @@ nav {
 .arriba .item {
 
     margin-left: 20px;
+    color: #EFFFF6;
 }
 
 .abajo {
@@ -163,7 +164,7 @@ form {
 
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
-    gap: 50px; /* Espacio entre los libros */
+    gap: 50px;
     padding-top: 50px;
     padding-bottom: 50px;
     margin: 0px 80px;
@@ -177,37 +178,54 @@ form {
     position: relative;
     padding: 20px;
     border-radius: 10px;
-    padding: 10px;
     color: black;
     list-style-type: none;
     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
 }
+
+.Libros .foto {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.Libros .boton {
+
+    background-color: #EFFFF6;
+    border-radius: 10px;
+    padding: 10px 25px;
+    border: none;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 1);
+    text-decoration: none;
+    color: black;
+}
+
 
 .titulo {
 
     padding-top: 10px;
     padding-left: 10px;
     font-size: 30px;
-    
+    font-weight: bold;
+    display: block;
 }
 
 .foto {
 
-    padding-top: 10px;
-    padding-right: 10px;
-    display: flex;
+    object-fit: cover;
+    border-radius: 8px;
     float: right;
-
 }
 
 .escritor {
-    
+
     padding-left: 10px;
     font-size: 20px;
+    display: block;
 }
 
 .genero {
-    
+
     padding-left: 10px;
     font-size: 20px;
 }

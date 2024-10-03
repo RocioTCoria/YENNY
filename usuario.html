@@ -37,78 +37,62 @@
 
         <div class="elementosaladerecha">
 
-          <div class="arriba">
+            <div class="arriba">
 
-            <img onclick="Aviso()" id="campana" class="item" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/campa.png?v=1717864364937" alt="campana de notificación" title="campana de notificaciones" />
-      
-              <div id="notificacion" style="display: none;"> 
-          
-                <p id="mensaje"> Su manuscrito se ha subido con éxito. </p> 
-      
-              </div>
+            <a href="Login.html" class="item"> <button id="cargarlibro" class="boton">Iniciar Sesion</button> </a>
 
-          </div>
-      
-          <div class="abajo">
+            <a href="register.html" class="item"> <button id="Estatus" class="boton">Registrarte</button> </a>
 
-            <a href="cargarLibro.html"> <button id="cargarlibro" class="boton">Cargar libro</button> </a>
-      
-            <a href="statusWriter.html"> <button id="Estatus" class="boton">Estatus</button> </a>
-      
-            <a href="index.html"> <button id="Inicio" class="boton">Cerrar Sesión</button> </a> <!--Hacer una ventana de ¿Estas seguro de cerrar sesion?-->
-          
-          </div>
+            </div>
 
         </div> 
-          
+
     </nav>
-      
+
     <form id="filtro" action="#" method="post">
 
-      <input id="idNombre" class="mismocss" name="nmNombre" type="text" placeholder="Nombre del libro"/>
-      <input id="idAutor" class="mismocss" name="nmAutor" type="text" placeholder="Autor"/>
+        <input id="idNombre" class="mismocss" name="nmNombre" type="text" placeholder="Nombre del libro"/>
+        <input id="idAutor" class="mismocss" name="nmAutor" type="text" placeholder="Autor"/>
 
-      <select id="idGenero" class="mismocss" name="nmGenero">
+        <select id="idGenero" class="mismocss" name="nmGenero">
 
-          <option value="" disabled selected>Género</option>
-          <option value="Ficción moderna y contemporánea">Ficción moderna y contemporánea</option>
-          <option value="Ciencia ficción">Ciencia ficción</option>
-          <option value="Novela">Novela</option>
-          <option value="Biografía">Biografía</option>
+            <option value="" disabled selected>Género</option>
+            <option value="Ficción moderna y contemporánea">Ficción moderna y contemporánea</option>
+            <option value="Ciencia ficción">Ciencia ficción</option>
+            <option value="Novela">Novela</option>
+            <option value="Biografía">Biografía</option>
 
-      </select>
+        </select>
 
-      <button id="filtrar" type="button">Filtrar</button>
+        <button id="filtrar" type="button">Filtrar</button>
 
     </form>
 
     <div class="image-container">
 
-      <h1 class="text-overlay">DESCUBRÍ UN NUEVO MUNDO</h1>
-      <img src="img/TUMUNDO1.jpg" alt="Img de fondo inspirador" title="Tu Mundo">
+        <h1 class="text-overlay">DESCUBRÍ UN NUEVO MUNDO</h1>
+        <img src="img/TUMUNDO1.jpg" alt="Img de fondo inspirador" title="Tu Mundo">
 
     </div>
 
     <section>
-    
-      <ul id="lista">
 
-      </ul>
+        <ul id="lista">
 
-      <div id="kids">
+        </ul>
 
+        <div id="kids">
 
+        </div>
 
-      </div>
-    
     </section>
     
-    <footer>
+        <footer>
 
-        <p> 2024 YENNY &copy;</p>
+            <p> 2024 YENNY &copy;</p>
 
-    </footer>
-  </body>
+        </footer>
+    </body>
 </div>
 
 </html>

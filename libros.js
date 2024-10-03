@@ -3,29 +3,37 @@ var libros = [
         "titulo": "Comentarios al Náucrato",
         "escritor": "Tomás Rebord",
         "genero": "Ficción moderna y contemporánea",
-        "clave": "Náucrato, Rebord",
         "foto": "https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/9789504985921%201.png?v=1717872699992"
     },
     {
         "titulo": "DUNE",
         "escritor": "Frank Herbert",
         "genero": "Ciencia ficción",
-        "clave": "Paul Atreides, Herbert",
         "foto": "https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/0c00cbb74142643771a16065636dd0e3%201.png?v=1717876011623"
     },
     {
         "titulo": "Y por amor y guerrabajo el sol guaraní",
         "escritor": "Gloria V. Casañas",
         "genero": "Novela",
-        "clave": "Casañas",
         "foto": "https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/hhhh.png?v=1717884998174"
     },
     {
         "titulo": "Autobiografía de un Yogui",
         "escritor": "ParamaHansa Yogananda",
         "genero": "Biografía",
-        "clave": "Yogui",
         "foto": "https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/sfsgg.png?v=1717885013444"
+    },
+    {
+        "titulo": "La lección de August",
+        "escritor": "Raquel Palacio",
+        "genero": "Novela",
+        "foto": "img/leccion.png"
+    },
+    {
+        "titulo": "Una Apuesta de Amor",
+        "escritor": "Lynn Painter",
+        "genero": "Novela",
+        "foto": "img/apuesta.png"
     }
 ];
 

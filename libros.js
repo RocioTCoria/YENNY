@@ -85,22 +85,12 @@ window.onload = function() {
             boton.href = "compra.html?"+index;
             boton.classList.add("boton");
 
-            // Botón "Estatus"
-            var botonEstatus = document.createElement("a");
-            botonEstatus.href = "statusWriter.html";
-            var botonInterno = document.createElement("button");
-            botonInterno.id = "boton";
-            botonInterno.textContent = "Estatus";
-            botonInterno.classList.add("boton");
-            botonEstatus.appendChild(botonInterno);  
-
             // Añadir elementos al contenedor
             elemento.appendChild(titulo);
             elemento.appendChild(escritor);
             if (libro.genero) elemento.appendChild(genero);
             if (libro.precio) elemento.appendChild(precio);
             elemento.appendChild(boton);
-            elemento.appendChild(botonEstatus); 
             elemento.appendChild(img); 
 
             // Añadir la clase para estilos

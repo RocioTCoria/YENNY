@@ -3,29 +3,43 @@ var libros = [
         "titulo": "Comentarios al Náucrato",
         "escritor": "Tomás Rebord",
         "genero": "Ficción moderna y contemporánea",
-        "clave": "Náucrato, Rebord",
+        "precio": "$10.000",
         "foto": "https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/9789504985921%201.png?v=1717872699992"
     },
     {
         "titulo": "DUNE",
         "escritor": "Frank Herbert",
         "genero": "Ciencia ficción",
-        "clave": "Paul Atreides, Herbert",
+        "precio": "$100.000",
         "foto": "https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/0c00cbb74142643771a16065636dd0e3%201.png?v=1717876011623"
     },
     {
         "titulo": "Y por amor y guerrabajo el sol guaraní",
         "escritor": "Gloria V. Casañas",
         "genero": "Novela",
-        "clave": "Casañas",
+        "precio": "$30.000",
         "foto": "https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/hhhh.png?v=1717884998174"
     },
     {
         "titulo": "Autobiografía de un Yogui",
         "escritor": "ParamaHansa Yogananda",
         "genero": "Biografía",
-        "clave": "Yogui",
+        "precio": "$200.000",
         "foto": "https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/sfsgg.png?v=1717885013444"
+    },
+    {
+        "titulo": "La Lección de August",
+        "escritor": "Raquel Palacio",
+        "genero": "Novela",
+        "precio": "$50.000",
+        "foto": "img/leccion.png"
+    },
+    {
+        "titulo": "Una Apuesta de Amor",
+        "escritor": "Lynn Painter",
+        "genero": "Novela",
+        "precio": "$25.500",
+        "foto": "img/apuesta.png"
     }
 ];
 
@@ -45,19 +59,19 @@ window.onload = function() {
             titulo.classList.add("titulo");
 
             var escritor = document.createElement("p");
-            escritor.textContent = "Escritor: " + (libro.escritor || "No disponible");
+            escritor.textContent = (libro.escritor || "No disponible");
             escritor.classList.add("escritor");
 
             var genero = document.createElement("p");
             if (libro.genero) {
-                genero.textContent = "Género: " + libro.genero;
+                genero.textContent = libro.genero;
                 genero.classList.add("genero");
             }
 
-            var palabrasClave = document.createElement("p");
-            if (libro.clave) {
-                palabrasClave.textContent = "Palabras clave: " + libro.clave;
-                palabrasClave.classList.add("palabras-clave");
+            var precio = document.createElement("p");
+            if (libro.precio) {
+                precio.textContent = libro.precio;
+                precio.classList.add("precio");
             }
 
             var img = document.createElement("img");
@@ -65,27 +79,20 @@ window.onload = function() {
             img.alt = libro.titulo || "Imagen no disponible";
             img.classList.add("foto");
 
-            // Botón "Comprar"
-            var boton = document.createElement("a");
-            boton.textContent = "Comprar";
-            boton.href = "compra.html?"+index;
-            boton.classList.add("boton");
-
-           // Botón "Estatus"
+            // Botón "Estatus"
             var botonEstatus = document.createElement("a");
-            botonEstatus.href = "status.html";
+            botonEstatus.href = "statusWriter.html";
             var botonInterno = document.createElement("button");
             botonInterno.id = "boton";
             botonInterno.textContent = "Estatus";
             botonInterno.classList.add("boton");
-            botonEstatus.appendChild(botonInterno);
+            botonEstatus.appendChild(botonInterno);  
 
             // Añadir elementos al contenedor
             elemento.appendChild(titulo);
             elemento.appendChild(escritor);
             if (libro.genero) elemento.appendChild(genero);
-            if (libro.clave) elemento.appendChild(palabrasClave);
-            elemento.appendChild(boton);
+            if (libro.precio) elemento.appendChild(precio);
             elemento.appendChild(botonEstatus); 
             elemento.appendChild(img); 
 

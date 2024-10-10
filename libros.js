@@ -14,11 +14,11 @@ var libros = [
         "foto": "https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/0c00cbb74142643771a16065636dd0e3%201.png?v=1717876011623"
     },
     {
-        "titulo": "Y por amor y guerrabajo el sol guaraní",
-        "escritor": "Gloria V. Casañas",
+        "titulo": "Boku no Hero",
+        "escritor": "Kōhei Horikoshi",
         "genero": "Novela",
-        "precio": "$30.000",
-        "foto": "https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/hhhh.png?v=1717884998174"
+        "precio": "$28.000",
+        "foto": "img/Sin título-1.png"
     },
     {
         "titulo": "Autobiografía de un Yogui",
@@ -54,6 +54,7 @@ window.onload = function() {
 
             var elemento = document.createElement("li");
             var contiene = document.createElement("div");
+            var soloimg = document.createElement("div");
 
             var titulo = document.createElement("h3");
             titulo.textContent = libro.titulo || "Título no disponible";
@@ -92,9 +93,13 @@ window.onload = function() {
             if (libro.genero) elemento.appendChild(genero);
             if (libro.precio) elemento.appendChild(precio);
             elemento.appendChild(boton);
-            elemento.appendChild(img);
             
+            contiene.classList.add("Contenedor");
             contiene.appendChild(elemento);
+            contiene.appendChild(soloimg);
+
+            soloimg.classList.add("Imagensola");
+            soloimg.appendChild(img);
 
             // Añadir la clase para estilos
             elemento.classList.add("Libros");

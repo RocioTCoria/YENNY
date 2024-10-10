@@ -173,23 +173,25 @@ form {
     margin: 0px 80px;
 }
 
-.Libros {
+.Contenedor {
 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
     width: 100%;
     height: auto;
     border: 2px solid #335D92;
-    position: relative;
     padding: 20px;
     border-radius: 10px;
     color: black;
     list-style-type: none;
     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
 }
 
 .Libros .foto {
 
-    display: flex;
-    justify-content: space-between;
+    padding-left: 50px;
 }
 
 .Libros .boton {

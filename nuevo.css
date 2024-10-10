@@ -90,7 +90,7 @@ nav {
 
 .content {
 
-    margin-top: 200px;
+    margin-top: 50px;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -116,7 +116,7 @@ nav {
 
     background-color: white;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
     background:#BABABA;
@@ -128,48 +128,45 @@ nav {
     padding: 10px 0px 10px 5px;
     margin: 5px 0px 0px;
     border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .form-container button {
 
-    width: 40%;
-    padding: 10px;
-    background-color: #627FA5;
+    background-color: #335D92;
+    border-radius: 10px;
+    padding: 10px 25px;
     border: none;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
     color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-left:60%;
-    margin-top:10px;
+    margin-left: 80%;
+    margin-top: 10px;
 }
 
 .row {
 
-    display:table;
+    display: table;
     clear: both;
-    width:100%;
-
+    width: 100%;
+    padding: 0px 10px;
 }
 
 .col {
 
     width:48%;
-    margin-right:2%;
     float:left;
-
 }
 
 .col-25{
 
     width:23%;
-    margin-right:2%;
     float:left;
 }
 
 .col-75{
 
     width:73%;
-    margin-right:2%;
     float:left;
 }
 
@@ -229,7 +226,7 @@ input[type="checkbox"]{
     padding: 10px;
 }
 
-
+/*--- cargarLibro.html ---*/
 
 
 
@@ -245,7 +242,7 @@ footer {
     text-align: center;
     align-content: center;
     padding: 20px;
-
+    margin-top: 165px;
 }
 
 footer p {

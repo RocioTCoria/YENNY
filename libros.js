@@ -53,6 +53,7 @@ window.onload = function() {
         librosFiltrados.forEach((libro,index) => {
 
             var elemento = document.createElement("li");
+            var contiene = document.createElement("div");
 
             var titulo = document.createElement("h3");
             titulo.textContent = libro.titulo || "Título no disponible";
@@ -91,11 +92,13 @@ window.onload = function() {
             if (libro.genero) elemento.appendChild(genero);
             if (libro.precio) elemento.appendChild(precio);
             elemento.appendChild(boton);
-            elemento.appendChild(img); 
+            elemento.appendChild(img);
+            
+            contiene.appendChild(elemento);
 
             // Añadir la clase para estilos
             elemento.classList.add("Libros");
-            lista.appendChild(elemento);
+            lista.appendChild(contiene);
         });
     }
 

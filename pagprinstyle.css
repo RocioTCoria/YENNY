@@ -3,6 +3,9 @@
 body {
 
     background-color: #EFFFF6;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 nav {
@@ -174,7 +177,7 @@ form {
 
     width: 100%;
     height: auto;
-    background: linear-gradient(to top, #002B62, #335D92, #DAE4DE);
+    border: 2px solid #335D92;
     position: relative;
     padding: 20px;
     border-radius: 10px;
@@ -191,15 +194,14 @@ form {
 
 .Libros .boton {
 
-    background-color: #EFFFF6;
+    background-color: #335D92;
     border-radius: 10px;
     padding: 10px 25px;
     border: none;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 1);
     text-decoration: none;
-    color: black;
+    color: white;
 }
-
 
 .titulo {
 

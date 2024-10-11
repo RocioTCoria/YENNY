@@ -1,34 +1,59 @@
 var libros = [{
-  
+
     "titulo":"Comentarios al Náucrato",
     "escritor":"Tomás Rebord",
     "genero":"Ficción moderna y contemporánea",
-    "clave":"Naucrato, Rebord",
     "tapa": "Dura",
     "precio":"$ 23000",
     "lugar" : "Yenny santa fe",
     "foto":"https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/9789504985921%201.png?v=1717872699992"
-},{
+},
+{
     "titulo":"DUNE",
     "escritor":"Frank Herbert",
     "genero":"Ciencia ficción",
-    "clave":"Paul Atreides, Hebert",
+    "tapa": "Dura",
+    "precio": "$100.000",
+    "lugar" : "Av. Corrientes 3247",
     "foto":"https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/0c00cbb74142643771a16065636dd0e3%201.png?v=1717876011623"
-},{
-    "titulo":"Y por amor y guerrabajo el sol guaraní",
-    "escritor":"Gloria V. Casañas",
-    "genero":"Novela",
-    "clave":"Casañas",
-    "foto":"https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/hhhh.png?v=1717884998174"
-},{
-    "titulo":"Autobiagrafía de un Yogui",
-    "escritor":"ParamaHansa Yogananda",
-    "genero":"Biografía",
-    "clave":"Yogui",
-    "foto":"https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/sfsgg.png?v=1717885013444"
-}]
-
-
+},    
+{
+    "titulo": "Boku no Hero",
+    "escritor": "Kōhei Horikoshi",
+    "genero": "Novela",
+    "tapa": "Dura",
+    "precio": "$28.000",
+    "lugar" : "Yenny santa fe",
+    "foto": "img/Sin título-1.png"
+},
+{
+    "titulo": "Autobiografía de un Yogui",
+    "escritor": "ParamaHansa Yogananda",
+    "genero": "Biografía",
+    "tapa": "Dura",
+    "precio": "$200.000",
+    "lugar" : "Av. Corrientes 3247",
+    "foto": "https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/sfsgg.png?v=1717885013444"
+},
+{
+    "titulo": "La Lección de August",
+    "escritor": "Raquel Palacio",
+    "genero": "Novela",
+    "tapa": "Dura",
+    "precio": "$50.000",
+    "lugar" : "Av. Corrientes 3247",
+    "foto": "img/leccion.png"
+},
+{
+    "titulo": "Una Apuesta de Amor",
+    "escritor": "Lynn Painter",
+    "genero": "Novela",
+    "tapa": "Dura",
+    "precio": "$25.500",
+    "lugar" : "Yenny santa fe",
+    "foto": "img/apuesta.png"
+}
+];
 
 window.onload = function(){
     const envio = 1
@@ -52,19 +77,19 @@ window.onload = function(){
     if(titulo)
         titulo.textContent = element.titulo
     if(escritor)
-        escritor.textContent = "Escritor: " + element.escritor
+        escritor.textContent = element.escritor
     if(genero)
-        genero.textContent = "Genero:" + element.genero
+        genero.textContent = "Género: " + element.genero
     if(tapa)
-        tapa.textContent = "tapa: " + element.tapa
+        tapa.textContent = "Tapa: " + element.tapa
     if(lugar)
         lugar.textContent = "Lugar: " + element.lugar
     if(precio)
-        precio.innerHTML= "<b>" + element.precio + "</b>"
+        precio.innerHTML= element.precio
     if(pago_value && pago_id)
-        pago_id.innerHTML= "<b>Tipo de pago: " + pago_value + "</b>"
+        pago_id.innerHTML= "Tipo de pago: " + pago_value
     if(envio_value && envio_id)
-        envio_id.innerHTML= "<b> Tipo de envio: " + envio_value + "</b>"
+        envio_id.innerHTML= "Tipo de envio: " + envio_value
 }
 
 function detalle(){
@@ -90,21 +115,11 @@ function detalle(){
 }
 
 function volver(){
-  var index = window.location.href.split('?').pop()
-  window.location.href = "compra.html?"+index;
+    var index = window.location.href.split('?').pop()
+    window.location.href = "compra.html?"+index;
 }
 
-function Aviso() {
-  
-        var notificacion = document.getElementById("notificacion");
-        if (notificacion.style.display === "none" || notificacion.style.display === "") {
-          
-                notificacion.style.display = "block";
-          
-        } 
-        else {
-              
-                notificacion.style.display = "none";
-            }
-        }
+function confirma() {
 
+    alert("Su compra se ha realizado. ¡Disfrute su libro!")
+}

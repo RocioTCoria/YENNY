@@ -8,79 +8,86 @@
     <meta name="robots" content="https://www.yenny-elateneo.com/"/>
     <meta name="author" content="equipocomodin@gmail.com"/>
     <meta name="publisher" content="YENNY"/>
-  
-  
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="estado.css">
-  
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="nuevo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title> YENNY - Estado </title>
     <script src="estado.js "></script>
 </head>
 <body>
-  
-  <nav>
-    
-        <a href="#" > 
-          
-            <img id="logo" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/logo.png?v=1717799493674" alt="Logo YENNY" width="8%" title="logo YENNY"/>
-  
-            <h2 id="nombreautor"> Diego </h2>
-          
-            <img id="fotoperfil" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/gatito.png?v=1717802499885" alt="Foto de perfil" width="4%" title="foto de perfil"/>
-           
-        </a>
-      
-            <img id="campana" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/campa.png?v=1717864364937" alt="campana de notificación" width="2%" title="campana de notificaciones"/>  
-      
-            <a href="estado.html"> <button id="propuesta"> Propuestas </button> </a>
-      
-            <a href="manuscrito.html"> <button id="cargarmanu"> Cargar manuscrito </button> </a>
-      
-    </nav>       
-      
-    <section>
-  
-     <form id="filtro" action="#" method="post">
 
-                <input id="idNombre" name="nmNombre" type="text" placeholder="Nombre del libro" required/> <br> 
-          
-                <input id="idAutor" name="nmAutor" type="text" placeholder="Autor" required/> <br>
-                
-                <select id="idGenero" name="nmGenero" required >
-                  
-                    <option value="" disabled selected> Género </option>
-                  
-                    <option value="cf"> Ciencia ficción </option>
-                  
-                    <option value="a"> Aventuras </option>
-                  
-                    <option value="r"> Romántica </option>
-                  
-                    <option value="f"> Fantasía </option>
-                  
-                    <option value="t"> Terror </option>
-                  
-                    <option value="j"> Juvenil </option>
-                  
-                    <option value="p"> Poesía </option>
-                  
-                    <option value="nh"> Novela histórica </option>
-                  
-                    <option value="fmyc"> Ficción moderna y contemporánea </option>
-  
-                </select>
-       
-             <input id="idClave" name="nmClave" type="text" placeholder="Palabras clave" required/> 
+<nav>   
 
-             <button id="filtrar" type="button">Filtrar</button>
-       
-      </form> 
-       
-    </section>  
+    <a href="pagempleado.html" >
 
-       <ul id="lista">
+        <img id="logo" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/logo.png?v=1717799493674" alt="Logo YENNY" title="logo YENNY"/>
 
-       </ul>
+    </a>
+
+    <div class="elementosaladerecha">
+
+    <div class="arriba">
+
+        <img onclick="Aviso()" id="campana" class="item" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/campa.png?v=1717864364937" alt="campana de notificación" title="campana de notificaciones" />
+
+        <div id="notificacion" style="display: none;"> 
+
+            <p id="mensaje"> Su manuscrito se ha subido con éxito. </p> 
+
+        </div>
+
+        <h2 id="nombreautor" class="item"> Diego </h2>
+
+        <img id="fotoperfil" class="item" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/gatito.png?v=1717802499885" alt="Foto de perfil" title="foto de perfil YENNY"/>
+
+    </div>
+
+    <div class="abajo">
+
+        <a href="manuscrito.html"> <button id="cargarlibro" class="boton">Cargar libro</button> </a>
+
+        <a href="estado.html"> <button id="Propuestas" class="boton">Propuestas</button> </a>
+
+        <a href="index.html"> <button id="Inicio" class="boton">Cerrar Sesión</button> </a> <!--Hacer una ventana de ¿Estas seguro de cerrar sesion?-->
+
+    </div>
+
+    </div> 
+
+</nav> 
+
+<form id="filtro" action="#" method="post">
+
+    <input id="idNombre" class="mismocss" name="nmNombre" type="text" placeholder="Nombre del libro"/>
+    <input id="idAutor" class="mismocss" name="nmAutor" type="text" placeholder="Autor"/>
+
+    <select id="idGenero" class="mismocss" name="nmGenero">
+
+        <option value="" disabled selected>Género</option>
+        <option value="Ficción moderna y contemporánea">Ficción moderna y contemporánea</option>
+        <option value="Ciencia ficción">Ciencia ficción</option>
+        <option value="Novela">Novela</option>
+        <option value="Biografía">Biografía</option>
+
+    </select>
+
+    <button id="filtrar" type="button">Filtrar</button>
+
+</form>  
+
+<section>
+
+    <ul id="lista">
+
+    </ul>
+
+</section>
+
 </body>
 </html>

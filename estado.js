@@ -47,7 +47,7 @@ window.onload = function () {
             nombre.classList.add("titulo");
 
             var escritor = document.createElement("p");
-            escritor.textContent = "Autor: " + (propuestasFiltradas[index].escritor || "Escritor no disponible");
+            escritor.textContent = propuestasFiltradas[index].escritor || "Escritor no disponible";
             escritor.classList.add("escritor");
 
             var estado = document.createElement("p");
@@ -70,13 +70,13 @@ window.onload = function () {
             var boton = document.createElement("a");
             boton.textContent = "Revisar";
             boton.href = "revisarLibro.html";
-            boton.classList.add("boton");
+            boton.classList.add("botonestado");
 
             elemento.appendChild(nombre);
             elemento.appendChild(escritor);
             elemento.appendChild(estado);
             elemento.appendChild(boton);
-            elemento.classList.add("Libros");
+            elemento.classList.add("estadoLibros");
 
             lista.appendChild(elemento);
         }

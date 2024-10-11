@@ -86,6 +86,53 @@ nav {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 1);
 }
 
+/*--- Filtro (solo aparece en algunas pags) ---*/
+
+form {
+
+    background-color: #BABABA;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    z-index: 10;
+    position: relative;
+}
+
+.mismocss {
+    
+    background-color: #DDDDDD;
+    border: none;
+    border-radius: 8px;
+    padding: 5px 50px 5px 10px;
+    width: 200px;
+    margin-left: 30px; 
+
+}
+
+#filtrar {
+
+    background-color: #DDDDDD;
+    border: none;
+    border-radius: 8px;
+    padding: 5px 18px;
+    color: black;
+    cursor: pointer;
+    align-self: center;
+    transition: background-color 0.5s ease;
+    transition: color 0.5 ease;
+    margin-left: 30px; 
+}
+
+#filtrar:hover {
+
+    background-color: #335D92;
+    color: white;
+    
+}
+
 /*--- cargarLibro.html ---*/
 
 .content {
@@ -425,6 +472,42 @@ input[type="checkbox"]{
 }
 
 /*--- estado.html ---*/
+
+#lista {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    gap: 50px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    margin: 0px 80px;
+}
+
+.estadoLibros {
+
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+    height: auto;
+    border: 2px solid #335D92;
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+    list-style-type: none;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.botonestado {
+
+    background-color: #335D92;
+    border-radius: 10px;
+    padding: 10px 25px;
+    border: none;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: white;
+    float: right;
+}
 
 /*--- FOOTER---*/
 

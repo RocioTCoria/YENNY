@@ -226,8 +226,117 @@ input[type="checkbox"]{
     padding: 10px;
 }
 
-/*--- cargarLibro.html ---*/
+/*--- compra.html ---*/
 
+#Central {
+
+    margin:auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 80%;
+    display: flex;
+    color: white;
+}
+
+#infoCompra {
+
+    margin: 0px;
+    padding: 0;
+    margin-bottom: 0px;
+}
+
+.row .col-75 {
+
+    margin: 0;
+    padding: 0;
+}
+
+#nuevasection {
+
+    background-color: #335D92;
+    flex: 1;
+    flex-direction: column;
+    width: 40%;
+    border-radius: 6px;
+    padding: 25px;
+    padding-left: 50px;
+    padding-bottom: 40px;
+}
+
+#nuevasection div {
+
+    margin-bottom: 20px;
+}
+
+#nuevasection form {
+
+    padding-bottom: 10px;
+}
+
+#nuevasection form label {
+
+    padding: 10px;
+}
+
+#formDomicilio {
+
+    display: none;
+}
+
+#formEntrega input {
+
+    margin-left: 8px;
+}
+
+#formPago input {
+
+    margin-left: 8px;
+}
+
+#formDomicilio input {
+
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+#continuarDetalles {
+
+    background-color: #EFFFF6;
+    border-radius: 10px;
+    padding: 10px 25px;
+    border: none;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: black;
+    float: right;
+    margin-right: 30px;
+}
+
+#agregarDomicilioBtn {
+
+    background-color: #EFFFF6;
+    border-radius: 10px;
+    padding: 10px 25px;
+    border: none;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: black;
+}
+
+#Volver {
+
+    background-color: #EFFFF6;
+    border-radius: 10px;
+    padding: 10px 25px;
+    border: none;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: black;
+}
+
+/*--- detallesCompra.html ---*/
 
 
 

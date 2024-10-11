@@ -94,6 +94,7 @@ nav {
     padding: 20px;
     display: flex;
     justify-content: center;
+
 }
 
 .gray-bg {
@@ -119,7 +120,7 @@ nav {
     border-radius: 10px;
     box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
-    background:#BABABA;
+    background: #335D92;
 }
 
 .form-container input[type="text"], .form-container textarea {
@@ -133,13 +134,13 @@ nav {
 
 .form-container button {
 
-    background-color: #335D92;
+    background-color: #EFFFF6;
     border-radius: 10px;
     padding: 10px 25px;
     border: none;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
     text-decoration: none;
-    color: white;
+    color: black;
     margin-left: 80%;
     margin-top: 10px;
 }
@@ -377,6 +378,53 @@ input[type="checkbox"]{
     color: black;
     margin-top: 20px;
 }
+
+/*--- empleadopagos.html ---*/
+
+.contenedorpago {
+
+    background-color: #335D92;
+    padding: 20px;
+    border-radius: 10px;  
+    margin-top: 50px;
+    display: flex;
+    color: white;
+}
+
+.center-block {
+
+    position: relative;
+    margin: auto;
+    max-width: 720px;
+}
+
+.form-control {
+
+    border-radius: 6px;
+    padding: 15px 10px;
+    height: auto;
+}
+
+.librito {
+
+    width: 100%;
+    margin-top: 5px;
+}
+
+#Siguiente {
+
+    background-color: #EFFFF6;
+    border-radius: 10px;
+    padding: 10px 25px;
+    border: none;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: black;
+    margin-top: 10px;
+    float: right;
+}
+
+/*--- estado.html ---*/
 
 /*--- FOOTER---*/
 

@@ -550,6 +550,17 @@ input[type="text"], input[type="file"] {
     margin-bottom: 1em;
 }
 
+#btnCargar {
+
+    background-color: #EFFFF6;
+    border-radius: 10px;
+    padding: 10px 25px;
+    border: none;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: black;
+}
+
 .popup-overlay {
 
     position: fixed;

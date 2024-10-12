@@ -604,6 +604,34 @@ input[type="text"], input[type="file"] {
 
 
 
+/*--- status.html ---*/
+
+#orden {
+
+    margin: 50px 200px 0px;
+}
+
+.checkbox-content{
+
+    padding: 10px 20px 0px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.form-container {
+
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 5px;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
+    background: #335D92;
+}
+
+.checkbox-content input {
+
+    margin-left: 12%;
+}
+
 /*--- FOOTER---*/
 
 footer {

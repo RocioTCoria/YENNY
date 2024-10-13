@@ -1,164 +1,56 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/*--- index.html ---*/
 
-* {
-  font-family: 'Roboto', sans-serif; 
-}
-/* personalizaciones bootstrap */
-:root{
-  
-    --blanco : #F7F8FA;
-    --azul : #EFFFF6;
-    --verde : #335D92;
-    --gris : #B7B7B7;
+body {
+
+  background-color: #EFFFF6;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-#emailError {
+#azulSuperior {
 
-    color:red;
-    display: none;
-}
-
-#contraseñaError {
-
-    color:red;
-    display: none;
-}
-
-#errorGeneral {
-
-    color:red;
-    display: none;
-}
-
-#lista{
-  
-    margin-top: 180px;
-    padding: 2px 100px;
-    width: 100%;
-    height: auto;
-    list-style-type: none;
-}
-
-.Libros {
-    
-    position: relative;
-    padding: 20px;
-    border-radius: 6px;
-    vertical-align: top;
-    margin: auto;
-    margin-top: 50px;
-    padding: 10px;
-    width: 1400px;
-    height: 400px;
-    background-color: #D9D9D9;
-    color: black;
-}
-
-.Libros .foto {
-  
-  position: absolute;
-  top: 22px;
-  left: 1100px;
-}
-
-.titulo {
-  
-  padding-top: 70px;
-  padding-left: 100px;
-  font-size: 30px;
-  
-}
-
-.escritor {
-  
-  padding-top: 5px;
-  padding-left: 100px;
-  font-size: 20px;
-}
-
-.genero {
-  
-  padding-top: 5px;
-  padding-left: 100px;
-  font-size: 20px;
-}
-
-.palabras-clave {
-  
-  padding-top: 5px;
-  padding-left: 100px;
-  font-size: 20px;
-  padding-bottom: 10px;
-}
-
-.boton {
-  
-  background-color: #BDBDBD;
-  border: none;
-  border-radius: 3px;
-  padding: 8px 35px;
-  color: black;
-  margin-top: 20px;
-  margin-left: 100px;
-  text-decoration: none;
-  
-}
-
-.btn-primary {
-    --bs-btn-color: 000;
-    --bs-btn-bg: #BABABA;
-    --bs-btn-border-color: #BABABA;
-    --bs-btn-hover-color: 000;
-    --bs-btn-hover-bg: #5e525b;
-    --bs-btn-hover-border-color: #5e525b;
-    --bs-btn-focus-shadow-rgb: 49, 132, 253;
-    --bs-btn-active-color: 000;
-    --bs-btn-active-bg: #0a58ca;
-    --bs-btn-active-border-color: #0a53be;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: 000;
-    --bs-btn-disabled-bg: #0d6efd;
-    --bs-btn-disabled-border-color: #0d6efd;
-}
-
-/*-----------------------------*/
-
-html {
-  
-    min-height: 100%;
-    height: auto;
+  background: linear-gradient(to top, #002B62, #335D92);
+  height: 250px;
+  width: 100%;
+  position: relative;
 }
 
 .center-block {
-  
-    position: relative;
-    margin: 100px auto;
-    max-width: 720px;
+
+  justify-content: center; 
+  align-items: center;     
+  height: 100vh;
+  text-align: center;
+  margin-top: -130px;
+  z-index: 1;
 }
 
-.logo-container {
+img {
+
+  max-width: 100%;
+  height: auto;
   
-    width: 150px;
-    position: relative;
-    margin: 30px auto;
 }
 
-.logo-container img {
-  
-    width:100%;
+.btn {
+
+  background-color: #335D92;
+  border-radius: 12px;
+  padding: 10px 40px;
+  border: none;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
 }
 
-body {
-  
-    background: linear-gradient(var(--verde) 0px, var(--verde) 170px, var(--blanco) 174px, var(--blanco) 180px, var(--azul) 80px, var(--azul) 100%) 100%/100% no-repeat;
-    width: 100%;
-    margin:0 auto;
-}
+.btn1 {
 
-.w-90 {
-  
-    width:90%;
+  background-color: #335D92;
+  border-radius: 12px;
+  padding: 10px 55px;
+  border: none;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
 }
 
 .google-btn:before {
@@ -172,272 +64,6 @@ body {
   
 }
 
-.btn-primary {
-  
-    border-radius: 9px;
-    height: 40px;
-    padding: 0px 50px;
-    color: black;
-}
-
-.form-control {
-    border-radius: 9px;
-}
-
-
-nav {
-  
-  position: relative;
-  
-}
-
-#logo {
-  
-  position: absolute;
-  top: 10px;
-  left: 40px;
-  
-}
-
-#fotoperfil {
-  
-  position: absolute;
-  top: 15px;
-  left: 1800px;
-  cursor: pointer;
-}
-
-#nombreautor {
-  
-  position: absolute;
-  top: 30px;
-  left: 1688px;
-  color: white;
-  
-}
-
-#campana {
-  
-  position: absolute;
-  top: 30px;
-  left: 1630px;
-  cursor: pointer;
-}
-
-#mensaje {
-    position: absolute;
-    background-color: #6A9B83;
-    top: 100px;
-    left: 1510px;
-    padding: 15px 20px 15px 15px;
-    border-radius: 5px;
-    transition: top 0.5s ease;
-    z-index: 2;
-}
-
-#propuesta {
-  
-  position: absolute;
-  top: 120px;
-  left: 1400px;
-  padding: 2px 80px;
-  border-radius: 3px;
-  background-color: #BDBDBD;
-  border: none;
-  font-size: 16px;
-  transition: background-color 0.5s ease;
-}
-
-#propuesta:hover{
-
-background-color: #EFFFF6;
-
-}
-
-#cargarmanu {
-  
-  position: absolute;
-  top: 120px;
-  left: 1660px;
-  padding: 2px 40px;
-  border-radius: 3px;
-  background-color: #BDBDBD;
-  border: none;
-  font-size: 16px;
-  transition: background-color 0.5s ease;
-}
-
-#cargarmanu:hover{
-
-background-color: #EFFFF6;
-
-}
-
-#filtro {
-  
-  position: relative;
-  background-color: #D9D9D9;
-  top: 180px;
-  padding-bottom: 30px;
-}
-
-#idNombre {
-  
-  position: absolute;
-  top: 35px;
-  left: 200px;
-  background-color: #BDBDBD;
-  border: none;
-  border-radius: 3px;
-  padding: 2px 10px;
-  padding-right: 60px;
-}
-
-#idAutor {
-  
-  position: absolute;
-  top: 35px;
-  left: 600px;
-  background-color: #BDBDBD;
-  border: none;
-  border-radius: 3px;
-  padding: 2px 10px;
-  padding-right: 60px;
-}
-
-#idGenero {
-  
-  position: absolute;
-  top: 35px;
-  left: 1000px;
-  background-color: #BDBDBD;
-  border: none;
-  border-radius: 3px;
-  padding: 2px 10px;
-  padding-right: 1px;
-}
-
-#idClave {
-  
-  position: absolute;
-  top: 35px;
-  left: 1425px;
-  background-color: #BDBDBD;
-  border: none;
-  border-radius: 3px;
-  padding: 2px 10px;
-  padding-right: 60px;
-}
-
-#ubicar {
-  
-  background-color: #002B62;
-  width: 100%;
-  height: 100px;
-  
-}
-
-#publi {
-  
-  background-color: #335D92;
-  height: 20px;
-  
-}
-
-#publicarBoton {
-  
-  position: absolute;
-  top: 2100px;
-  left: 1515px;
-  padding: 10px 40px;
-  border-radius: 3px;
-  background-color: #BDBDBD;
-  border: none;
-  margin-top: 20px;
-  transition: backgroundcolor 0.5s ease;
-  color: black;
-  transition: color 0.5s ease;
-}
-
-#publicarBoton:hover{
-
-  background-color: #44617D;
-  color: white;
-
-}
-
-#filtro1 {
-  
-  position: relative;
-  background-color: #D9D9D9;
-  top: 180px;
-  padding-bottom: 105px;
-}
-
-
-#cargarlibro {
-  
-  position: absolute;
-  top: 15px;
-  left: 800px;
-  padding: 5px 90px;
-  border-radius: 3px;
-  background-color: #BDBDBD;
-  border: none;
-  margin-top: 20px;
-}
-
-#estatus {
-  
-  position: absolute;
-  top: 15px;
-  left: 1100px;
-  padding: 5px 90px;
-  border-radius: 3px;
-  background-color: #BDBDBD;
-  border: none;
-  margin-top: 20px;
-
-}
-
-#mensaje {
-  
-  position: absolute;
-  background-color: #44617D;
-  top: 100px;
-  left: 1510px;
-  padding: 15px 20px 15px 15px;
-  border-radius: 5px;
-  transition: top 0.5s ease;
-  z-index: 2;
-  color:white;
-  
-}
-
-#estatusss {
-  
-  position: absolute;
-  top: 120px;
-  left: 1170px;
-  padding: 2px 80px;
-  border-radius: 3px;
-  background-color: #BDBDBD;
-  border: none;
-  font-size: 16px;
-  transition: background-color 0.5s ease;
-  
-}
-
-#estatusss:hover {
-
-background-color: #EFFFF6;
-
-
-}
-
-
-
-
 
 /*---PAGINA DE COMPRA DE LIBRO---*/
 
@@ -450,197 +76,3 @@ body {
     min-height: 100vh;
 
 }
-
-nav {
-
-    margin: 0;
-    padding: 0;
-}
-
-#Central {
-
-  margin-left: 150px;
-  margin-right: 150px; 
-  margin-top: 230px;
-  margin-bottom: 50px;
-  font-family: 'Roboto', sans-serif;
-  width: 80%;
-  display: flex;
-
-}
-
-#nuevasection {
-
-  background-color: #BABABA;
-  flex: 1;
-  flex-direction: column;
-  width: 40%;
-  border-radius: 6px;
-  padding: 25px;
-
-}
-
-#nuevasection div {
-
-  margin-bottom: 20px;
-}
-
-#nuevasection form {
-
-  padding-bottom: 10px;
-}
-
-#nuevasection form label {
-
-  padding: 10px;
-}
-
-#formDomicilio {
-
-  display: none;
-}
-
-#formDomicilio input {
-
-  border: none;
-  outline: none;
-  border-radius: 3px;
-  margin-left: 10px;
-}
-
-#continuarDetalles {
-
-  padding: 10px 40px;
-  border-radius: 3px;
-  background-color:#002B62;
-  border: none;
-  margin-top: 20px;
-  color:  white;
-  float: right;
-}
-
-#agregarDomicilioBtn {
-
-  padding: 10px 40px;
-  border-radius: 3px;
-  background-color:#002B62;
-  border: none;
-  margin-top: 20px;
-  color:  white;
-}
-
-#filtro {
-  position: relative;
-  background-color: #D9D9D9;
-  top: 180px;
-  padding: 30px 200px 30px 200px; 
-  display: flex; 
-  flex-wrap: wrap; 
-  gap: 20px; 
-
-}
-
-#idNombre, #idAutor, #idGenero, #idClave {
-  background-color: #BDBDBD;
-  border: none;
-  border-radius: 3px;
-  padding: 10px;
-  width: 200px; 
-  margin-bottom: 10px; 
-}
-
-#filtrar {
-  background-color: #BDBDBD;
-  border: none;
-  border-radius: 3px;
-  padding: 10px 20px;
-  color: black;
-  cursor: pointer;
-  align-self: center; 
-  margin-left: 1500px;
-  margin-top: 8px;
-  transition: background-color 0.5s ease;
-  transition: color 0.5 ease;
-}
-
-#filtrar:hover {
-
-background-color: #335D92;
-color: white;
-
-}
-
-#idGenero {
-
-  padding-right: 20px; 
-}
-
-.loading {
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #EFFFF6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  opacity: 1;
-  transition: opacity 0.5s ease;
-
-}
-
-.loading.fade-out {
-
-  opacity: 0;
-  pointer-events: none;
-}
-
-.loading-gif {
-
-  width: 200px;
-  height: auto;
-}
-
-
-/* Cambiar color de los fondos grises a #B7B7B7 */
-  .Libros, #filtro {
-  background-color: #B7B7B7; 
-}
-
-/* Cambiar color de los botones y contenedores de texto a #CDCDCD */
-#filtrar, #publicarBoton, .form-control, #idNombre, #idAutor, #idGenero,#idClave{
-
-  background-color: #CDCDCD;
-}
-
-.boton{
-
-  background-color: #44617D;
-  color: white;
-  transition: background-color 0.8s ease;
-  transition: color 0.8s ease;
-
-}
-
-.boton:hover{
-
-background-color: #EFFFF6;
-color:black;
-
-}
-
-footer {
-  
-  background-color: var(--verde);
-  color: white;
-  text-align: center;
-  padding: 1em 0;
-  width: 100%;
-  margin-top: 5%;
-padding: 3%;
-
-}
-

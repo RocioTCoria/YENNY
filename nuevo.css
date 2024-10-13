@@ -509,12 +509,9 @@ input[type="checkbox"]{
     float: right;
 }
 
-/*--- manuscrito.html ---*/
+/*--- manuscrito.html -> CSS SE ENCUENTRA EN EL MISMO ARCHIVO HTML (manuscrito.html) ---*/
 
-
-/*--- revisarLibro.html ---*/
-
-
+/*--- revisarLibro.html -> CSS SE ENCUENTRA EN EL MISMO ARCHIVO HTML (revisarLibro.html) ---*/
 
 /*--- status.html ---*/
 
@@ -544,7 +541,7 @@ input[type="checkbox"]{
     margin-left: 12%;
 }
 
-/*--- statusWriter.html COINCIDE CON PARTE DE stratus.html ---*/
+/*--- statusWriter.html COINCIDE CON PARTE DE status.html ---*/
 
 /*--- CHAT DE statusWriter.html ---*/
 

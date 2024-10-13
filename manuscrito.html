@@ -12,7 +12,6 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="nuevo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
@@ -22,7 +21,7 @@
 <body>
     <nav>   
 
-        <a href="#" >
+        <a href="pagempleado.html" >
         
             <img id="logo" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/logo.png?v=1717799493674" alt="Logo YENNY" title="logo YENNY"/>
 
@@ -96,4 +95,215 @@
         <p>&copy; 2024 YENNY</p>
     </footer>
 </body>
+
+<style>
+
+/*--- NAV ---*/
+
+body {
+
+    background-color: #EFFFF6;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav {
+
+    background: linear-gradient(to top, #002B62, #335D92);
+    display: flex;
+    height: 170px;
+    position: relative;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+#logo {
+
+    width: 140px;
+    max-width: 100%;
+    align-items: center;
+    margin-left: 20px;
+    cursor: pointer; 
+}
+
+.elementosaladerecha {
+
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end;
+}
+
+.arriba {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.arriba .item {
+
+    margin-left: 20px;
+    color: #EFFFF6;
+}
+
+.abajo {
+
+    margin-top: 10px;
+    display: flex;
+}
+
+.abajo .boton{
+
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+#campana {
+
+    width: 35px;
+    height: 40px;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+#fotoperfil {
+
+    width: 80px;
+    height: 80px;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+.boton {
+
+    background-color: #EFFFF6;
+    border-radius: 8px;
+    padding: 5px 18px;
+    border: none;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 1);
+}
+
+/*--- CONTENIDO ---*/
+
+main {
+    
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#main-content {
+
+    margin-top: 50px;
+    background-color: #335D92;
+    padding: 2em;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    color: white; 
+}
+
+label {
+
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+input[type="text"], input[type="file"] {
+
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+#btnCargar {
+
+    background-color: #EFFFF6;
+    border-radius: 10px;
+    padding: 10px 25px;
+    border: none;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: black;
+}
+
+.popup-overlay {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+#cerrar-pop-up {
+    
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+}
+
+.popup-error {
+    
+    color: black;
+}
+
+/*--- notificacion ---*/
+
+#mensaje {
+
+    position: absolute;
+    background-color: #44617D;
+    top: 100px;
+    left: 1400px;
+    padding: 15px 20px 15px 15px;
+    border-radius: 5px;
+    transition: top 0.5s ease;
+    z-index: 2;
+    color:white;
+}
+
+/*--- FOOTER---*/
+
+footer {    
+
+    background-color: #335D92;
+    color: #EFFFF6;
+    width: 100%; 
+    height: auto;
+    text-align: center;
+    align-content: center;
+    padding: 20px;
+    margin-top: 203px;
+}
+
+footer p {
+
+    margin: 0px;
+}
+
+</style>
 </html>

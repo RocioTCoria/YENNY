@@ -247,12 +247,6 @@ input[type="checkbox"]{
     margin-bottom: 0px;
 }
 
-.row .col-75 {
-
-    margin: 0;
-    padding: 0;
-}
-
 #nuevasection {
 
     background-color: #335D92;
@@ -288,19 +282,35 @@ input[type="checkbox"]{
 #formEntrega input {
 
     margin-left: 8px;
+    margin-top: 30px;
+}
+
+#formEntrega label {
+
+    display: inline;
 }
 
 #formPago input {
 
     margin-left: 8px;
+    margin-top: 30px;
 }
 
 #formDomicilio input {
 
     border: none;
     outline: none;
-    border-radius: 3px;
+    border-radius: 5px;
     margin-left: 10px;
+    width: 20%;
+    margin-top: 15px;
+
+}
+
+#formPago label {
+
+    display: inline;
+    margin-top: 10px;
 }
 
 #continuarDetalles {
@@ -314,6 +324,7 @@ input[type="checkbox"]{
     color: black;
     float: right;
     margin-right: 30px;
+    margin-top: 20px;
 }
 
 #agregarDomicilioBtn {
@@ -336,6 +347,7 @@ input[type="checkbox"]{
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
     text-decoration: none;
     color: black;
+    margin-top: 20px;
 }
 
 /*--- detallesCompra.html ---*/

@@ -632,9 +632,111 @@ input[type="text"], input[type="file"] {
     margin-left: 12%;
 }
 
-/*--- statusWriter.html ---*/
+/*--- statusWriter.html COINCIDE CON PARTE DE stratus.html ---*/
 
+/*--- CHAT DE statusWriter.html ---*/
 
+.chat-button {
+
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+}
+
+.chat-button img {
+
+    width:100%;
+    position: relative;
+}
+
+.chat-block {
+
+    position: fixed;
+    bottom: 0;
+    right: 50px;
+    z-index: 10;
+    width: 500px;
+}
+
+.chat-boton {
+
+    position: absolute;
+    bottom: 50px;
+    z-index:100;
+    width:100px;
+    right: 0px;
+}
+
+.chat-boton img {
+
+    width:100%;
+}
+
+.chat-pop {
+
+    position:absolute;
+    width:80%;
+    height:400px;
+    overflow-y: scroll;
+    background-color: white;
+    border-radius: 5px;
+    bottom: 150px;
+    right: 70px;
+    z-index: 110;
+    display: none;
+}
+
+.chat-input {
+
+    width: 80%;
+    position: absolute;
+    bottom: 115px;
+    z-index: 200;
+    display: none;
+}
+
+.chat-input input[type="number"]{
+
+    width: 70%;
+    border-radius: 5px;
+    border: 2px solid #335D92;
+    margin-left: 6.5%;
+    height: 20px;
+}
+
+.chat-input button {
+
+    width:20%;
+    background-color: #335D92;
+    border-radius: 10px;
+    padding: 3px;
+    border: none;
+    text-decoration: none;
+    color: white;
+}
+
+.bot {
+
+    background-color: #335D92;
+    color: white;
+    padding: 5px;
+    margin-left: 2%;
+    margin-right: 6%;
+    margin-top: 2%;
+    border-radius: 5px;
+}
+
+.person {
+
+    background-color: var(--gris);
+    color:var(--blanco);
+    padding:5px;
+    margin-left:50%;
+    margin-right: 2%;
+    border-radius: 5px;
+    text-align:right;
+}
 
 /*--- sucursales.html ---*/
 

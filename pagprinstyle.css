@@ -12,7 +12,7 @@ nav {
 
     background: linear-gradient(to top, #002B62, #335D92);
     display: flex;
-    height: 170px;
+    min-height: 170px;
     position: relative;
     padding: 20px;
     justify-content: space-between;
@@ -53,6 +53,8 @@ nav {
 
     margin-top: 10px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .abajo .boton{
@@ -94,6 +96,7 @@ form {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
     padding: 25px;
     display: flex;
+    flex-wrap:wrap;
     justify-content: center;
     align-items: center;
     color: black;
@@ -102,13 +105,13 @@ form {
 }
 
 .mismocss {
-    
+    flex:1 1 200px;
     background-color: #DDDDDD;
     border: none;
     border-radius: 8px;
     padding: 5px 50px 5px 10px;
-    width: 200px;
-    margin-left: 30px; 
+    max-width: 200px;
+    margin: 5px 15px; 
 
 }
 
@@ -121,9 +124,8 @@ form {
     color: black;
     cursor: pointer;
     align-self: center;
-    transition: background-color 0.5s ease;
-    transition: color 0.5 ease;
-    margin-left: 30px; 
+    transition: all 0.5s ease;
+    margin: 5px 15px; 
 }
 
 #filtrar:hover {
@@ -154,7 +156,7 @@ form {
     left: 50%; 
     transform: translate(-50%, -50%);
     color: white; 
-    font-size: 100px;
+    font-size: 7.5vw;
     text-align: center;
     background-color: rgba(51, 93, 146, 0.7); 
     padding: 10px;
@@ -165,20 +167,24 @@ form {
 
 #lista {
 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    display: flex;
+    flex-wrap: wrap;
     gap: 50px;
+    justify-content: center;
     padding-top: 50px;
     padding-bottom: 50px;
-    margin: 0px 80px;
+    margin: 0px auto;
+    width:90%;
 }
 
 .Contenedor {
 
     display: flex; 
+    flex: 1 1 calc(33.33% - 50px);
+    max-width: calc(33.33% - 50px); 
+    min-width:500px;
     justify-content: space-between; 
     align-items: center;
-    width: 100%;
     height: auto;
     border: 2px solid #335D92;
     padding: 20px;
@@ -186,7 +192,6 @@ form {
     color: black;
     list-style-type: none;
     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
-    display: flex;
 }
 
 .Libros .foto {
@@ -302,4 +307,20 @@ footer p {
 
     width: 25%;
     height: auto;
+}
+
+
+@media (max-width: 768px) {
+    .abajo{
+        justify-content: flex-end;
+        width:200px;
+    }
+    .abajo a {
+        flex: 1 1 200px; 
+        max-width: 200px; 
+    }
+    .abajo .boton{
+        width:200px;
+    }
+
 }

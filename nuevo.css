@@ -12,7 +12,7 @@ nav {
 
     background: linear-gradient(to top, #002B62, #335D92);
     display: flex;
-    height: 170px;
+    min-height: 170px;
     position: relative;
     padding: 20px;
     justify-content: space-between;
@@ -53,6 +53,8 @@ nav {
 
     margin-top: 10px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .abajo .boton{
@@ -147,10 +149,10 @@ nav {
 
 .row {
 
-    display: table;
-    clear: both;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
     width: 100%;
-    padding: 0px 10px;
 }
 
 .col {
@@ -162,14 +164,19 @@ nav {
 
 .col-25{
 
-    width:23%;
-    float:left;
+    flex:1 1 25%;
+    max-width: 25%;
 }
 
 .col-75{
 
-    width:73%;
-    float:left;
+   flex:1 1 75%;
+   max-width: 75%;
+}
+
+.foto{
+    width:100%;
+    max-width:225px;
 }
 
 .form-container .file-input-container {
@@ -376,8 +383,7 @@ input[type="checkbox"]{
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
     text-decoration: none;
     color: black;
-    float: right;
-    margin-top: 20px;
+    margin: 20px;
 }
 
 #atras {
@@ -441,19 +447,23 @@ input[type="checkbox"]{
 
 #lista {
 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 50px;
     padding-top: 50px;
-    padding-bottom: 10px;
-    margin: 0px 80px;
+    padding-bottom: 50px;
+    margin: 0px auto;
+    width:90%;
 }
 
 .estadoLibros {
 
+    flex: 1 1 calc(33.33% - 50px);
+    max-width: calc(33.33% - 50px); 
+    min-width:400px;
     justify-content: space-between; 
     align-items: center;
-    width: 100%;
     height: auto;
     border: 2px solid #335D92;
     padding: 20px;
@@ -462,6 +472,7 @@ input[type="checkbox"]{
     list-style-type: none;
     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
 }
+
 
 .botonestado {
 
@@ -473,6 +484,51 @@ input[type="checkbox"]{
     text-decoration: none;
     color: white;
     float: right;
+}
+
+form#filtro {
+
+    background-color: #BABABA;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    z-index: 10;
+    position: relative;
+}
+
+form#filtro .mismocss {
+    flex:1 1 200px;
+    background-color: #DDDDDD;
+    border: none;
+    border-radius: 8px;
+    padding: 5px 50px 5px 10px;
+    max-width: 200px;
+    margin: 5px 15px; 
+
+}
+
+#filtrar {
+
+    background-color: #DDDDDD;
+    border: none;
+    border-radius: 8px;
+    padding: 5px 18px;
+    color: black;
+    cursor: pointer;
+    align-self: center;
+    transition: all 0.5s ease;
+    margin: 5px 15px; 
+}
+
+#filtrar:hover {
+
+background-color: #335D92;
+color: white;
+
 }
 
 /*--- manuscrito.html ---*/
@@ -565,7 +621,9 @@ input[type="text"], input[type="file"] {
 
 #orden {
 
-    margin: 50px 200px 0px;
+    margin: 50px auto 0px;
+    max-width:600px;
+
 }
 
 .checkbox-content{
@@ -829,3 +887,33 @@ footer p {
 
     margin: 0px;
 }
+
+@media (max-width: 768px) {
+    .abajo{
+        justify-content: flex-end;
+        width:200px;
+    }
+    .abajo a {
+        flex: 1 1 200px; 
+        max-width: 200px; 
+    }
+    .abajo .boton{
+        width:200px;
+    }
+    .col-25{
+
+        flex:1 1 100%;
+        max-width: 100%;
+    }
+
+    .col-75{
+
+       flex:1 1 100%;
+       max-width: 100%;
+    }
+    .checkbox-content input {
+        margin-left:0;
+    }
+
+}
+

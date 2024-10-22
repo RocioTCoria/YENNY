@@ -81,13 +81,11 @@ window.onload = function() {
             img.alt = libro.titulo || "Imagen no disponible";
             img.classList.add("foto");
 
-            // Botón "Comprar"
             var boton = document.createElement("a");
             boton.textContent = "Comprar";
             boton.href = "compra.html?"+index;
             boton.classList.add("boton");
 
-            // Añadir elementos al contenedor
             elemento.appendChild(titulo);
             elemento.appendChild(escritor);
             if (libro.genero) elemento.appendChild(genero);

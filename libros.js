@@ -147,9 +147,6 @@ window.onload = function() {
     document.getElementById("filtrar").addEventListener("click", filtrarLibros);
 
 
-    var kidsContainer = document.getElementById('kids');
-
-
 // YENNY KIDS //
 
 

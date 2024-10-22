@@ -52,6 +52,24 @@ var libros = [{
     "precio": "$25.500",
     "lugar" : "Yenny santa fe",
     "foto": "img/apuesta.png"
+},
+{
+    "titulo": "Los Tres Chanchitos",
+    "escritor": "Joseph Jacobs",
+    "genero": "Infantil",
+    "tapa": "Dura",
+    "precio": "$6000",
+    "lugar" : "Av. Corrientes 3247",
+    "foto": "img/los3chanchitos.jpg"
+},
+{
+    "titulo": "Dumbo",
+    "escritor": "Helen Aberson",
+    "genero": "Infantil",
+    "tapa": "Dura",
+    "precio": "$8000",
+    "lugar" : "Yenny santa fe",
+    "foto": "img/dumbo.jpg"
 }
 ];
 

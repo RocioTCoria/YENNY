@@ -43,6 +43,24 @@ var libros = [
     }
 ];
 
+var kidslibros = [
+
+    {
+        "titulo": "Los Tres Chanchitos",
+        "escritor": "Joseph Jacobs",
+        "genero": "Infantil",
+        "precio": "$6000",
+        "foto": "img/los3chanchitos.jpg"
+    },
+    {
+        "titulo": "Dumbo",
+        "escritor": "Helen Aberson",
+        "genero": "Infantil",
+        "precio": "$8000",
+        "foto": "img/dumbo.jpg"
+    }
+]
+
 window.onload = function() {
     var lista = document.getElementById("lista");
     var originalLibros = [...libros];
@@ -128,7 +146,15 @@ window.onload = function() {
 
     document.getElementById("filtrar").addEventListener("click", filtrarLibros);
 
+
+    var kidsContainer = document.getElementById('kids');
+
+
+// YENNY KIDS //
+
+
 };
+
 
 // Función para mostrar y ocultar la notificación
 function Aviso() {
@@ -152,3 +178,4 @@ setTimeout(function() {
         document.getElementById('contenidoPrincipal').style.display = 'block';
     }, 200);
 }, 3000);
+

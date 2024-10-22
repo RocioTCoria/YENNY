@@ -281,13 +281,14 @@ form {
 }
 
 #solo2libros {
-    display: flex;                /* Flexbox para alinear los libros en fila */
-    justify-content: center;      /* Centramos los libros horizontalmente */
-    gap: 20px;                    /* Espacio entre los libros */
-    padding: 20px 0;  
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
 }
 
-#libro1.book-card {
+.libro1 {
 
     background-color: #335D92;
     border-radius: 15px;
@@ -298,7 +299,7 @@ form {
     margin: 20px;              
 }
 
-#libro1 img {
+.libro1 img {
 
     max-width: 100%; 
     height: auto; 
@@ -306,7 +307,7 @@ form {
     margin-bottom: 15px;   
 }
 
-#libro1 h2.posicion {
+.libro1 h2.posicion {
 
     font-size: 20px;
     font-weight: bold;  
@@ -315,57 +316,14 @@ form {
     color: black;
 }
 
-#libro1 p.posicion:first-of-type {
+.libro1 p.posicion:first-of-type {
 
     font-size: 14px;
     color: black;
     margin-bottom: 10px;
 }
 
-#libro1 p.posicion:last-of-type {
-
-    font-size: 16px;
-    font-weight: bold;
-    color: black;
-    margin-bottom: 15px;
-}
-
-#libro2.book-card {
-
-    background-color: #335D92;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    width: 200px;
-    text-align: center;
-    margin: 20px;              
-}
-
-#libro2 img {
-
-    max-width: 100%; 
-    height: auto; 
-    border-radius: 5px; 
-    margin-bottom: 15px;   
-}
-
-#libro2 h2.posicion {
-
-    font-size: 20px;
-    font-weight: bold;  
-    text-transform: uppercase;
-    margin: 10px 0 5px; 
-    color: black;
-}
-
-#libro2 p.posicion:first-of-type {
-
-    font-size: 14px;
-    color: black;
-    margin-bottom: 10px;
-}
-
-#libro2 p.posicion:last-of-type {
+.libro1 p.posicion:last-of-type {
 
     font-size: 16px;
     font-weight: bold;

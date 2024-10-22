@@ -280,11 +280,11 @@ form {
     font-size: 1.8vw;
 }
 
-#solo2libros {
+.solo2libros {
 
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    gap: 50px;
+    margin: 0px auto;
 
 }
 
@@ -296,7 +296,9 @@ form {
     padding: 20px;
     width: 200px;
     text-align: center;
-    margin: 20px;              
+    margin: 20px;
+    list-style: none;
+    padding-bottom: 30px;
 }
 
 .libro1 img {
@@ -307,28 +309,18 @@ form {
     margin-bottom: 15px;   
 }
 
-.libro1 h2.posicion {
+.libro1 h2 {
 
     font-size: 20px;
-    font-weight: bold;  
     text-transform: uppercase;
     margin: 10px 0 5px; 
-    color: black;
+    color: white;
 }
 
-.libro1 p.posicion:first-of-type {
-
-    font-size: 14px;
-    color: black;
-    margin-bottom: 10px;
-}
-
-.libro1 p.posicion:last-of-type {
+.libro1 p {
 
     font-size: 16px;
-    font-weight: bold;
-    color: black;
-    margin-bottom: 15px;
+    color: white;
 }
 
 .button {

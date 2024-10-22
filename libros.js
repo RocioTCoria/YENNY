@@ -49,14 +49,14 @@ var kidslibros = [
         "titulo": "Los Tres Chanchitos",
         "escritor": "Joseph Jacobs",
         "genero": "Infantil",
-        "precio": "$6000",
+        "precio": "$6.000",
         "foto": "img/los3chanchitos.jpg"
     },
     {
         "titulo": "Dumbo",
         "escritor": "Helen Aberson",
         "genero": "Infantil",
-        "precio": "$8000",
+        "precio": "$8.000",
         "foto": "img/dumbo.jpg"
     }
 ]
@@ -147,11 +147,72 @@ window.onload = function() {
     document.getElementById("filtrar").addEventListener("click", filtrarLibros);
 
 
+
 // YENNY KIDS //
 
 
-};
+var kidslista = document.getElementById("kidslista");
+var originalLibros = [...kidslibros];
 
+function mostrarLibrosKids (librosFiltrados) {
+    kidslista.innerHTML = "";
+
+    librosFiltrados.forEach((libro, index) => {
+
+        var elemento = document.createElement("li");
+        var contiene = document.createElement("div");
+        var soloimg = document.createElement("div");
+
+        var titulo = document.createElement("h2");
+        titulo.textContent = libro.titulo || "Título no disponible";
+        titulo.classList.add("titulo");
+
+        var escritor = document.createElement("p");
+        escritor.textContent = libro.escritor || "No disponible";
+        escritor.classList.add("escritor");
+
+        var genero = document.createElement("p");
+        if (libro.genero) {
+            genero.textContent = libro.genero;
+            genero.classList.add("genero");
+        }
+
+        var precio = document.createElement("p");
+        if (libro.precio) {
+            precio.textContent = libro.precio;
+            precio.classList.add("precio");
+        }
+
+        var img = document.createElement("img");
+        img.src = libro.foto;
+        img.alt = libro.titulo || "Imagen no disponible";
+        img.classList.add("foto");
+
+        var boton = document.createElement("a");
+        boton.textContent = "Comprar";
+        boton.href = "compra.html?" + index;
+        boton.classList.add("button");
+
+        elemento.appendChild(img);
+        elemento.appendChild(titulo);
+        elemento.appendChild(escritor);
+        if (libro.genero) elemento.appendChild(genero);
+        if (libro.precio) elemento.appendChild(precio);
+        elemento.appendChild(boton);
+
+        elemento.classList.add("libro1");
+
+        var ordenar = document.createElement("div");
+        ordenar.classList.add("solo2libros");
+        ordenar.appendChild(elemento);
+
+        kidslista.appendChild(ordenar);
+    });
+}
+
+mostrarLibrosKids (originalLibros);
+
+};
 
 // Función para mostrar y ocultar la notificación
 function Aviso() {

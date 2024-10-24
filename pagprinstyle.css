@@ -135,6 +135,28 @@ form {
     
 }
 
+#autocomplete-list {
+    position: absolute;
+    background-color: white;
+    max-height: 100px;
+    overflow-y: auto;
+    z-index: 1000;
+    width: 80%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#autocomplete-list li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+#autocomplete-list li:hover {
+    background-color: #f1f1f1;
+}
+
 /*--- PARTE SUPERIOR ---*/
 
 .image-container {

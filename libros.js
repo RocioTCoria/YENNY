@@ -46,6 +46,9 @@ var libros = [
 window.onload = function() {
     var lista = document.getElementById("lista");
     var originalLibros = [...libros]; // Copia del array original
+    var autoCompleteList = document.createElement('ul');
+    autoCompleteList.id = "autocomplete-list";
+    document.getElementById("idNombre").parentNode.appendChild(autoCompleteList);
 
     // Función para mostrar los libros en la lista
     function mostrarLibros(librosFiltrados) {
@@ -99,6 +102,29 @@ window.onload = function() {
         });
     }
 
+    // Función para autocompletar
+    function autocompletar() {
+        var nombre = document.getElementById("idNombre").value.toLowerCase().trim();
+        autoCompleteList.innerHTML = ""; // Limpiar la lista de autocompletado
+
+        if (nombre) {
+            var librosFiltrados = originalLibros.filter(libro => 
+                libro.titulo.toLowerCase().includes(nombre)
+            );
+            
+            librosFiltrados.forEach(libro => {
+                var suggestion = document.createElement("li");
+                suggestion.textContent = libro.titulo;
+                suggestion.addEventListener("click", function() {
+                    document.getElementById("idNombre").value = libro.titulo;
+                    autoCompleteList.innerHTML = ""; // Limpiar sugerencias al seleccionar
+                    filtrarLibros(); // Filtrar libros con la selección
+                });
+                autoCompleteList.appendChild(suggestion);
+            });
+        }
+    }
+
     // Función para filtrar los libros
     function filtrarLibros() {
         var nombre = document.getElementById("idNombre").value.toLowerCase().trim();
@@ -117,6 +143,9 @@ window.onload = function() {
 
     // Mostrar todos los libros inicialmente
     mostrarLibros(originalLibros);
+
+    // Evento input para autocompletar
+    document.getElementById("idNombre").addEventListener("input", autocompletar);
 
     // Añadir evento click al botón de filtrar
     document.getElementById("filtrar").addEventListener("click", filtrarLibros);

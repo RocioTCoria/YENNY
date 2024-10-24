@@ -135,27 +135,25 @@ form {
     
 }
 
-#autocomplete-list {
-    position: absolute;
+.sugerencias {
+    border: 1px solid #ccc;
     background-color: white;
-    max-height: 100px;
+    max-height: 150px;
     overflow-y: auto;
+    position: absolute;
     z-index: 1000;
-    width: 80%;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-#autocomplete-list li {
+  }
+  
+  .sugerencias div {
     padding: 10px;
     cursor: pointer;
-    border-bottom: 1px solid #ddd;
-}
+  }
+  
+  .sugerencias div:hover {
+    background-color: #f0f0f0;
+  }
+  
 
-#autocomplete-list li:hover {
-    background-color: #f1f1f1;
-}
 
 .popup {
     position: fixed;

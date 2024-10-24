@@ -74,21 +74,23 @@
     <form id="filtro" action="#" method="post">
 
       <input id="idNombre" class="mismocss" name="nmNombre" type="text" placeholder="Nombre del libro"/>
+      <div id="sugerenciasNombre" class="sugerencias"></div> <!-- Contenedor de sugerencias para nombres -->
+    
       <input id="idAutor" class="mismocss" name="nmAutor" type="text" placeholder="Autor"/>
-
+      <div id="sugerenciasAutor" class="sugerencias"></div> <!-- Contenedor de sugerencias para autores -->
+    
       <select id="idGenero" class="mismocss" name="nmGenero">
-
           <option value="" disabled selected>Género</option>
           <option value="Ficción moderna y contemporánea">Ficción moderna y contemporánea</option>
           <option value="Ciencia ficción">Ciencia ficción</option>
           <option value="Novela">Novela</option>
           <option value="Biografía">Biografía</option>
-
       </select>
-
+    
       <button id="filtrar" type="button">Filtrar</button>
-
+    
     </form>
+    
 
     <div class="image-container">
 
@@ -105,12 +107,12 @@
     
     </section>
 
-    
+    <!-- Agregar esto dentro del body -->
 <div id="popup" class="popup" style="display:none;">
-  <div class="popup-content">
-      <p>No se encontraron resultados para tu búsqueda.</p>
-      <button id="cerrarPopup">Cerrar</button>
-  </div>
+    <div class="popup-content">
+        <p>No se encontraron resultados para tu búsqueda.</p>
+        <button id="cerrarPopup">Cerrar</button>
+    </div>
 </div>
 
     

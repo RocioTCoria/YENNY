@@ -100,28 +100,62 @@ window.onload = function() {
         });
     }
 
-    // Función para autocompletar mientras se escribe, pero no mostrar los resultados inmediatamente
-    function autocompletar() {
+    // Función para autocompletar mientras se escribe
+    function autocompletar(inputId, sugerenciasId, tipo) {
+        var input = document.getElementById(inputId);
+        var sugerenciasDiv = document.getElementById(sugerenciasId);
+        var valorInput = input.value.toLowerCase().trim();
+
+        // Filtrar sugerencias basadas en el tipo (titulo o escritor)
+        var sugerencias = originalLibros
+            .map(libro => libro[tipo])
+            .filter((valor, indice, arr) => valor.toLowerCase().includes(valorInput) && arr.indexOf(valor) === indice);
+
+        // Mostrar las sugerencias debajo del campo de texto
+        sugerenciasDiv.innerHTML = "";
+        if (valorInput && sugerencias.length > 0) {
+            sugerencias.forEach(sugerencia => {
+                var div = document.createElement("div");
+                div.textContent = sugerencia;
+                div.addEventListener("click", function() {
+                    input.value = sugerencia;
+                    sugerenciasDiv.innerHTML = "";
+                });
+                sugerenciasDiv.appendChild(div);
+            });
+        }
+    }
+
+    // Mostrar todos los libros inicialmente
+    mostrarLibros(originalLibros);
+
+    // Evento input para mostrar las sugerencias mientras se escribe
+    document.getElementById("idNombre").addEventListener("input", function() {
+        autocompletar("idNombre", "sugerenciasNombre", "titulo");
+    });
+
+    document.getElementById("idAutor").addEventListener("input", function() {
+        autocompletar("idAutor", "sugerenciasAutor", "escritor");
+    });
+
+    // Evento click en el botón "Filtrar" para mostrar los resultados filtrados
+    document.getElementById("filtrar").addEventListener("click", function() {
         var nombre = document.getElementById("idNombre").value.toLowerCase().trim();
         var autor = document.getElementById("idAutor").value.toLowerCase().trim();
         var genero = document.getElementById("idGenero").value;
 
-        // Actualizamos librosFiltrados pero no mostramos aún
-        librosFiltrados = originalLibros.filter(libro => 
+        librosFiltrados = originalLibros.filter(libro =>
             (!nombre || libro.titulo.toLowerCase().includes(nombre)) &&
             (!autor || libro.escritor.toLowerCase().includes(autor)) &&
             (!genero || libro.genero === genero)
         );
-    }
 
-    // Función para mostrar los libros filtrados cuando se hace clic en el botón "Filtrar"
-    function filtrarLibros() {
         if (librosFiltrados.length === 0) {
             mostrarPopUp();
         } else {
             mostrarLibros(librosFiltrados); // Mostrar solo los libros filtrados al hacer clic
         }
-    }
+    });
 
     // Función para mostrar el pop-up
     function mostrarPopUp() {
@@ -132,17 +166,6 @@ window.onload = function() {
             popup.style.display = "none";
         });
     }
-
-    // Mostrar todos los libros inicialmente
-    mostrarLibros(originalLibros);
-
-    // Evento input para actualizar la variable "librosFiltrados" mientras se escribe
-    document.getElementById("idNombre").addEventListener("input", autocompletar);
-    document.getElementById("idAutor").addEventListener("input", autocompletar);
-    document.getElementById("idGenero").addEventListener("change", autocompletar);
-
-    // Evento click en el botón "Filtrar" para mostrar los resultados
-    document.getElementById("filtrar").addEventListener("click", filtrarLibros);
 };
 
 

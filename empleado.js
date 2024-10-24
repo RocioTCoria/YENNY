@@ -46,14 +46,12 @@ var libros = [
 window.onload = function() {
     var lista = document.getElementById("lista");
     var originalLibros = [...libros]; // Copia del array original
-    var autoCompleteList = document.createElement('ul');
-    autoCompleteList.id = "autocomplete-list";
-    document.getElementById("idNombre").parentNode.appendChild(autoCompleteList);
+    var librosFiltrados = originalLibros; // Para almacenar los libros filtrados temporalmente
 
     // Función para mostrar los libros en la lista
-    function mostrarLibros(librosFiltrados) {
+    function mostrarLibros(librosAMostrar) {
         lista.innerHTML = ""; // Limpiar la lista
-        librosFiltrados.forEach((libro, index) => {
+        librosAMostrar.forEach((libro, index) => {
             var elemento = document.createElement("li");
             var contiene = document.createElement("div");
             var soloimg = document.createElement("div");
@@ -102,54 +100,30 @@ window.onload = function() {
         });
     }
 
-    // Función para autocompletar
+    // Función para almacenar los libros filtrados mientras se escribe
     function autocompletar() {
         var nombre = document.getElementById("idNombre").value.toLowerCase().trim();
-        autoCompleteList.innerHTML = ""; // Limpiar la lista de autocompletado
 
-        if (nombre) {
-            var librosFiltrados = originalLibros.filter(libro => 
-                libro.titulo.toLowerCase().includes(nombre)
-            );
-            
-            librosFiltrados.forEach(libro => {
-                var suggestion = document.createElement("li");
-                suggestion.textContent = libro.titulo;
-                suggestion.addEventListener("click", function() {
-                    document.getElementById("idNombre").value = libro.titulo;
-                    autoCompleteList.innerHTML = ""; // Limpiar sugerencias al seleccionar
-                    filtrarLibros(); // Filtrar libros con la selección
-                });
-                autoCompleteList.appendChild(suggestion);
-            });
-        }
+        librosFiltrados = originalLibros.filter(libro => 
+            libro.titulo.toLowerCase().includes(nombre)
+        );
     }
 
-    // Función para filtrar los libros
+    // Función para mostrar los libros cuando se hace clic en el botón "Filtrar"
     function filtrarLibros() {
-        var nombre = document.getElementById("idNombre").value.toLowerCase().trim();
-        var autor = document.getElementById("idAutor").value.toLowerCase().trim();
-        var genero = document.getElementById("idGenero").value.toLowerCase().trim();
-
-        var librosFiltrados = originalLibros.filter(libro => {
-            return (!nombre || libro.titulo.toLowerCase().includes(nombre)) &&
-                   (!autor || libro.escritor.toLowerCase().includes(autor)) &&
-                   (!genero || libro.genero.toLowerCase().includes(genero));
-        });
-
-        // Mostrar los libros filtrados
-        mostrarLibros(librosFiltrados);
+        mostrarLibros(librosFiltrados); // Mostrar solo los libros filtrados al hacer clic
     }
 
     // Mostrar todos los libros inicialmente
     mostrarLibros(originalLibros);
 
-    // Evento input para autocompletar
+    // Evento input para actualizar la variable "librosFiltrados" mientras se escribe
     document.getElementById("idNombre").addEventListener("input", autocompletar);
 
-    // Añadir evento click al botón de filtrar
-    document.getElementById("filtrar").addEventListener("click", filtrarLibros);
+    // Evento click en el botón "Filtrar" para mostrar los resultados
+    document.getElementById("btnFiltrar").addEventListener("click", filtrarLibros);
 };
+
 
 
 // Función para mostrar y ocultar la notificación

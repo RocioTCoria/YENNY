@@ -100,18 +100,37 @@ window.onload = function() {
         });
     }
 
-    // Función para almacenar los libros filtrados mientras se escribe
+    // Función para autocompletar mientras se escribe, pero no mostrar los resultados inmediatamente
     function autocompletar() {
         var nombre = document.getElementById("idNombre").value.toLowerCase().trim();
+        var autor = document.getElementById("idAutor").value.toLowerCase().trim();
+        var genero = document.getElementById("idGenero").value;
 
+        // Actualizamos librosFiltrados pero no mostramos aún
         librosFiltrados = originalLibros.filter(libro => 
-            libro.titulo.toLowerCase().includes(nombre)
+            (!nombre || libro.titulo.toLowerCase().includes(nombre)) &&
+            (!autor || libro.escritor.toLowerCase().includes(autor)) &&
+            (!genero || libro.genero === genero)
         );
     }
 
-    // Función para mostrar los libros cuando se hace clic en el botón "Filtrar"
+    // Función para mostrar los libros filtrados cuando se hace clic en el botón "Filtrar"
     function filtrarLibros() {
-        mostrarLibros(librosFiltrados); // Mostrar solo los libros filtrados al hacer clic
+        if (librosFiltrados.length === 0) {
+            mostrarPopUp();
+        } else {
+            mostrarLibros(librosFiltrados); // Mostrar solo los libros filtrados al hacer clic
+        }
+    }
+
+    // Función para mostrar el pop-up
+    function mostrarPopUp() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "block";
+
+        document.getElementById("cerrarPopup").addEventListener("click", function() {
+            popup.style.display = "none";
+        });
     }
 
     // Mostrar todos los libros inicialmente
@@ -119,9 +138,11 @@ window.onload = function() {
 
     // Evento input para actualizar la variable "librosFiltrados" mientras se escribe
     document.getElementById("idNombre").addEventListener("input", autocompletar);
+    document.getElementById("idAutor").addEventListener("input", autocompletar);
+    document.getElementById("idGenero").addEventListener("change", autocompletar);
 
     // Evento click en el botón "Filtrar" para mostrar los resultados
-    document.getElementById("btnFiltrar").addEventListener("click", filtrarLibros);
+    document.getElementById("filtrar").addEventListener("click", filtrarLibros);
 };
 
 

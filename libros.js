@@ -45,13 +45,12 @@ var libros = [
 
 window.onload = function() {
     var lista = document.getElementById("lista");
-    var originalLibros = [...libros];
+    var originalLibros = [...libros]; // Copia del array original
 
+    // Función para mostrar los libros en la lista
     function mostrarLibros(librosFiltrados) {
-
-        lista.innerHTML = ""; 
-        librosFiltrados.forEach((libro,index) => {
-
+        lista.innerHTML = ""; // Limpiar la lista
+        librosFiltrados.forEach((libro, index) => {
             var elemento = document.createElement("li");
             var contiene = document.createElement("div");
             var soloimg = document.createElement("div");
@@ -61,20 +60,16 @@ window.onload = function() {
             titulo.classList.add("titulo");
 
             var escritor = document.createElement("p");
-            escritor.textContent = (libro.escritor || "No disponible");
+            escritor.textContent = libro.escritor || "No disponible";
             escritor.classList.add("escritor");
 
             var genero = document.createElement("p");
-            if (libro.genero) {
-                genero.textContent = libro.genero;
-                genero.classList.add("genero");
-            }
+            genero.textContent = libro.genero || "Género no disponible";
+            genero.classList.add("genero");
 
             var precio = document.createElement("p");
-            if (libro.precio) {
-                precio.textContent = libro.precio;
-                precio.classList.add("precio");
-            }
+            precio.textContent = libro.precio || "Precio no disponible";
+            precio.classList.add("precio");
 
             var img = document.createElement("img");
             img.src = libro.foto;
@@ -83,15 +78,15 @@ window.onload = function() {
 
             var boton = document.createElement("a");
             boton.textContent = "Comprar";
-            boton.href = "compra.html?"+index;
+            boton.href = "compra.html?" + index;
             boton.classList.add("boton");
 
             elemento.appendChild(titulo);
             elemento.appendChild(escritor);
-            if (libro.genero) elemento.appendChild(genero);
-            if (libro.precio) elemento.appendChild(precio);
+            elemento.appendChild(genero);
+            elemento.appendChild(precio);
             elemento.appendChild(boton);
-            
+
             contiene.classList.add("Contenedor");
             contiene.appendChild(elemento);
             contiene.appendChild(soloimg);
@@ -99,34 +94,34 @@ window.onload = function() {
             soloimg.classList.add("Imagensola");
             soloimg.appendChild(img);
 
-            // Añadir la clase para estilos
             elemento.classList.add("Libros");
             lista.appendChild(contiene);
         });
     }
 
+    // Función para filtrar los libros
     function filtrarLibros() {
         var nombre = document.getElementById("idNombre").value.toLowerCase().trim();
         var autor = document.getElementById("idAutor").value.toLowerCase().trim();
         var genero = document.getElementById("idGenero").value.toLowerCase().trim();
-        var clave = document.getElementById("idClave").value.toLowerCase().trim();
 
         var librosFiltrados = originalLibros.filter(libro => {
             return (!nombre || libro.titulo.toLowerCase().includes(nombre)) &&
                    (!autor || libro.escritor.toLowerCase().includes(autor)) &&
-                   (!genero || libro.genero.toLowerCase().includes(genero)) &&
-                   (!clave || libro.clave.toLowerCase().includes(clave));
+                   (!genero || libro.genero.toLowerCase().includes(genero));
         });
 
+        // Mostrar los libros filtrados
         mostrarLibros(librosFiltrados);
     }
 
-    
+    // Mostrar todos los libros inicialmente
     mostrarLibros(originalLibros);
 
+    // Añadir evento click al botón de filtrar
     document.getElementById("filtrar").addEventListener("click", filtrarLibros);
-
 };
+
 
 // Función para mostrar y ocultar la notificación
 function Aviso() {
@@ -139,6 +134,8 @@ function Aviso() {
 
 
 }
+
+
 
 setTimeout(function() {
 

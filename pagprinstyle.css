@@ -142,16 +142,23 @@ form {
     overflow-y: auto;
     position: absolute;
     z-index: 1000;
-  }
-  
-  .sugerencias div {
+    width: 100%; /* Alinea el ancho del contenedor con el del campo de entrada */
+    top: 100%; /* Alinea la posición con la parte inferior del campo */
+}
+
+#idNombre, #idAutor {
+    position: relative; /* Añadir posición relativa para que el contenedor se alinee */
+}
+
+.sugerencias div {
     padding: 10px;
     cursor: pointer;
-  }
-  
-  .sugerencias div:hover {
+}
+
+.sugerencias div:hover {
     background-color: #f0f0f0;
-  }
+}
+
   
 
 

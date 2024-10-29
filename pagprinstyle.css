@@ -142,6 +142,63 @@ form {
     
 }
 
+.sugerencias {
+    border: 1px solid #ccc;
+    background-color: white;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    z-index: 1000;
+    width: 100%; /* Alinea el ancho del contenedor con el del campo de entrada */
+    top: 100%; /* Alinea la posición con la parte inferior del campo */
+}
+
+#idNombre, #idAutor {
+    position: relative; /* Añadir posición relativa para que el contenedor se alinee */
+}
+
+.sugerencias div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.sugerencias div:hover {
+    background-color: #f0f0f0;
+}
+
+  
+
+
+.popup {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid black;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup-content button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background-color: #0056b3;
+}
+
+
 /*--- PARTE SUPERIOR ---*/
 
 .image-container {

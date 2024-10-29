@@ -45,13 +45,13 @@ var libros = [
 
 window.onload = function() {
     var lista = document.getElementById("lista");
-    var originalLibros = [...libros];
+    var originalLibros = [...libros]; // Copia del array original
+    var librosFiltrados = originalLibros; // Para almacenar los libros filtrados temporalmente
 
-    function mostrarLibros(librosFiltrados) {
-
-        lista.innerHTML = ""; 
-        librosFiltrados.forEach((libro) => {
-
+    // Función para mostrar los libros en la lista
+    function mostrarLibros(librosAMostrar) {
+        lista.innerHTML = ""; // Limpiar la lista
+        librosAMostrar.forEach((libro, index) => {
             var elemento = document.createElement("li");
             var contiene = document.createElement("div");
             var soloimg = document.createElement("div");
@@ -61,42 +61,33 @@ window.onload = function() {
             titulo.classList.add("titulo");
 
             var escritor = document.createElement("p");
-            escritor.textContent = (libro.escritor || "No disponible");
+            escritor.textContent = libro.escritor || "No disponible";
             escritor.classList.add("escritor");
 
             var genero = document.createElement("p");
-            if (libro.genero) {
-                genero.textContent = libro.genero;
-                genero.classList.add("genero");
-            }
+            genero.textContent = libro.genero || "Género no disponible";
+            genero.classList.add("genero");
 
             var precio = document.createElement("p");
-            if (libro.precio) {
-                precio.textContent = libro.precio;
-                precio.classList.add("precio");
-            }
+            precio.textContent = libro.precio || "Precio no disponible";
+            precio.classList.add("precio");
 
             var img = document.createElement("img");
             img.src = libro.foto;
             img.alt = libro.titulo || "Imagen no disponible";
             img.classList.add("foto");
 
-            // Botón "Estatus"
-            var botonEstatus = document.createElement("a");
-            botonEstatus.href = "status.html";
-            var botonInterno = document.createElement("button");
-            botonInterno.id = "boton";
-            botonInterno.textContent = "Estatus";
-            botonInterno.classList.add("boton");
-            botonEstatus.appendChild(botonInterno);  
+            var boton = document.createElement("a");
+            boton.textContent = "Comprar";
+            boton.href = "compra.html?" + index;
+            boton.classList.add("boton");
 
-            // Añadir elementos al contenedor
             elemento.appendChild(titulo);
             elemento.appendChild(escritor);
-            if (libro.genero) elemento.appendChild(genero);
-            if (libro.precio) elemento.appendChild(precio);
-            elemento.appendChild(botonEstatus); 
-            
+            elemento.appendChild(genero);
+            elemento.appendChild(precio);
+            elemento.appendChild(boton);
+
             contiene.classList.add("Contenedor");
             contiene.appendChild(elemento);
             contiene.appendChild(soloimg);
@@ -104,33 +95,77 @@ window.onload = function() {
             soloimg.classList.add("Imagensola");
             soloimg.appendChild(img);
 
-            // Añadir la clase para estilos
             elemento.classList.add("Libros");
             lista.appendChild(contiene);
         });
     }
 
-    function filtrarLibros() {
-        var nombre = document.getElementById("idNombre").value.toLowerCase().trim();
-        var autor = document.getElementById("idAutor").value.toLowerCase().trim();
-        var genero = document.getElementById("idGenero").value.toLowerCase().trim();
-        var clave = document.getElementById("idClave").value.toLowerCase().trim();
+    // Función para autocompletar mientras se escribe
+    function autocompletar(inputId, sugerenciasId, tipo) {
+        var input = document.getElementById(inputId);
+        var sugerenciasDiv = document.getElementById(sugerenciasId);
+        var valorInput = input.value.toLowerCase().trim();
 
-        var librosFiltrados = originalLibros.filter(libro => {
-            return (!nombre || libro.titulo.toLowerCase().includes(nombre)) &&
-                   (!autor || libro.escritor.toLowerCase().includes(autor)) &&
-                   (!genero || libro.genero.toLowerCase().includes(genero)) &&
-                   (!clave || libro.clave.toLowerCase().includes(clave));
-        });
+        // Filtrar sugerencias basadas en el tipo (titulo o escritor)
+        var sugerencias = originalLibros
+            .map(libro => libro[tipo])
+            .filter((valor, indice, arr) => valor.toLowerCase().includes(valorInput) && arr.indexOf(valor) === indice);
 
-        mostrarLibros(librosFiltrados);
+        // Mostrar las sugerencias debajo del campo de texto
+        sugerenciasDiv.innerHTML = "";
+        if (valorInput && sugerencias.length > 0) {
+            sugerencias.forEach(sugerencia => {
+                var div = document.createElement("div");
+                div.textContent = sugerencia;
+                div.addEventListener("click", function() {
+                    input.value = sugerencia;
+                    sugerenciasDiv.innerHTML = "";
+                });
+                sugerenciasDiv.appendChild(div);
+            });
+        }
     }
 
-    
+    // Mostrar todos los libros inicialmente
     mostrarLibros(originalLibros);
 
-    document.getElementById("filtrar").addEventListener("click", filtrarLibros);
+    // Evento input para mostrar las sugerencias mientras se escribe
+    document.getElementById("idNombre").addEventListener("input", function() {
+        autocompletar("idNombre", "sugerenciasNombre", "titulo");
+    });
 
+    document.getElementById("idAutor").addEventListener("input", function() {
+        autocompletar("idAutor", "sugerenciasAutor", "escritor");
+    });
+
+    // Evento click en el botón "Filtrar" para mostrar los resultados filtrados
+    document.getElementById("filtrar").addEventListener("click", function() {
+        var nombre = document.getElementById("idNombre").value.toLowerCase().trim();
+        var autor = document.getElementById("idAutor").value.toLowerCase().trim();
+        var genero = document.getElementById("idGenero").value;
+
+        librosFiltrados = originalLibros.filter(libro =>
+            (!nombre || libro.titulo.toLowerCase().includes(nombre)) &&
+            (!autor || libro.escritor.toLowerCase().includes(autor)) &&
+            (!genero || libro.genero === genero)
+        );
+
+        if (librosFiltrados.length === 0) {
+            mostrarPopUp();
+        } else {
+            mostrarLibros(librosFiltrados); // Mostrar solo los libros filtrados al hacer clic
+        }
+    });
+
+    // Función para mostrar el pop-up
+    function mostrarPopUp() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "block";
+
+        document.getElementById("cerrarPopup").addEventListener("click", function() {
+            popup.style.display = "none";
+        });
+    }
     // PANTALLA CERRAR SESION
 
     document.getElementById("Inicio").addEventListener("click", function() {
@@ -145,6 +180,8 @@ window.onload = function() {
         document.getElementById("avisodesesion").style.display = "none";
     });
 };
+
+
 
 // Función para mostrar y ocultar la notificación
 function Aviso() {

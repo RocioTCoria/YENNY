@@ -166,6 +166,20 @@ window.onload = function() {
             popup.style.display = "none";
         });
     }
+
+    // PANTALLA CERRAR SESION
+
+    document.getElementById("Inicio").addEventListener("click", function() {
+        document.getElementById("avisodesesion").style.display = "block";
+    });
+        
+    document.getElementById("positivo").addEventListener("click", function() {
+        window.location.href = "usuario.html";
+    });
+        
+    document.getElementById("negativo").addEventListener("click", function() {
+         document.getElementById("avisodesesion").style.display = "none";
+    });
 };
 
 

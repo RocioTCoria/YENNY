@@ -126,6 +126,7 @@ window.onload = function() {
 
     document.getElementById("filtrar").addEventListener("click", filtrarLibros);
 
+
 };
 
 // Función para mostrar y ocultar la notificación
@@ -139,6 +140,8 @@ function Aviso() {
 
 
 }
+
+// ANIMACIÓN
 
 setTimeout(function() {
 

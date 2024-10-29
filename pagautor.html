@@ -63,7 +63,7 @@
       
             <a href="statusWriter.html"> <button id="Estatus" class="boton">Estatus</button> </a>
       
-            <a href="index.html"> <button id="Inicio" class="boton">Cerrar Sesión</button> </a> <!--Hacer una ventana de ¿Estas seguro de cerrar sesion?-->
+            <button id="Inicio" class="boton">Cerrar Sesión</button>
           
           </div>
 
@@ -98,6 +98,15 @@
     </div>
 
     <section>
+
+      <div id="avisodesesion"  style="display: none;">
+        <div id="vamo1">
+            <h5>¿Estas seguro de que quieres cerrar sesión?</h5>
+  
+            <button id="positivo"  onclick="cerrar()">Sí, seguro</button>
+            <button id="negativo">No, quiero quedarme</button>
+        </div>
+      </div>
     
       <div id="lista" class="main-container">
 

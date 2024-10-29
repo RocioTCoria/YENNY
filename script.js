@@ -57,11 +57,16 @@ function Ingresar(){
         for (let index = 0; index < usuarios.length; index++) {
 
             if (usuarios[index].contraseña == contraseña && usuarios[index].mail == mail) {
+              var roles = "";
                 if (usuarios[index].rol == 1) {
+                    roles = [{"usuario":"autor"}];
+                    localStorage.setItem("logueado",JSON.stringify(roles));
                     login.setAttribute('action', 'pagautor.html');
                 }
                 if (usuarios[index].rol == 2) {
+                    roles = [{"usuario":"empleado"}];
                     login.setAttribute('action', 'pagempleado.html');
+                    localStorage.setItem("logueado",JSON.stringify(roles));
                 }
                 login.submit();
                 return; 
@@ -71,6 +76,10 @@ function Ingresar(){
         Error2.style.display = 'block';
         Error2.textContent = 'Correo o contraseña incorrectos';
     }
+
+
+
+
 }
 
 // register.html //

@@ -63,8 +63,14 @@
     
           <a href="estado.html"> <button id="Propuestas" class="boton">Propuestas</button> </a>
     
-          <a href="index.html"> <button id="Inicio" class="boton">Cerrar Sesión</button> </a> <!--Hacer una ventana de ¿Estas seguro de cerrar sesion?-->
+          <button id="Inicio" class="boton">Cerrar Sesión</button>
         
+          <script>
+function cerrar() {
+  localStorage.removeItem("logueado");
+}
+
+          </script>
         </div>
 
       </div> 
@@ -92,6 +98,15 @@
   </form>
 
   <section>
+
+    <div id="avisodesesion"  style="display: none;">
+      <div id="vamo1">
+          <h5>¿Estas seguro de que quieres cerrar sesión?</h5>
+
+          <button id="positivo"  onclick="cerrar()">Sí, seguro</button>
+          <button id="negativo">No, quiero quedarme</button>
+      </div>
+    </div>
     
     <ul id="lista">
 
@@ -117,6 +132,8 @@
       </div>
   </body>
 </div>
+
+
 
 </html>
 

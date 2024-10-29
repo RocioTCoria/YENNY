@@ -132,10 +132,7 @@ function detalle(){
         alert("debe seleccionar una opcion de envio y una forma de pago")
 }
 
-function volver(){
-    var index = window.location.href.split('?').pop()
-    window.location.href = "compra.html?"+index;
-}
+
 
 function confirma() {
 

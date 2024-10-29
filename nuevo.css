@@ -61,6 +61,13 @@ nav {
 
     margin-top: 10px;
     margin-right: 20px;
+    transition: all 0.5s ease;
+}
+
+.abajo .boton:hover {
+
+    background-color: #005B2F;
+    color: white;
 }
 
 #campana {
@@ -86,6 +93,13 @@ nav {
     padding: 5px 18px;
     border: none;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 1);
+    transition: all 0.5s ease;
+}
+
+.boton:hover {
+
+    background-color: #005B2F;
+    color: white;
 }
 
 /*--- cargarLibro.html y revisarLibro.html ---*/
@@ -145,6 +159,13 @@ nav {
     color: black;
     margin-left: 80%;
     margin-top: 10px;
+    transition: all 0.5s ease;
+}
+
+.form-container button:hover {
+
+    background-color: #005B2F;
+    color: white;
 }
 
 .row {
@@ -332,6 +353,13 @@ input[type="checkbox"]{
     float: right;
     margin-right: 30px;
     margin-top: 20px;
+    transition: all 0.5s ease;
+}
+
+#continuarDetalles:hover {
+
+    background-color: #005B2F;
+    color: white;
 }
 
 #agregarDomicilioBtn {
@@ -343,6 +371,13 @@ input[type="checkbox"]{
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
     text-decoration: none;
     color: black;
+    transition: all 0.5s ease;
+}
+
+#agregarDomicilioBtn:hover {
+
+    background-color: #005B2F;
+    color: white;
 }
 
 #Volver {
@@ -355,6 +390,13 @@ input[type="checkbox"]{
     text-decoration: none;
     color: black;
     margin-top: 20px;
+    transition: all 0.5s ease;
+}
+
+#Volver:hover {
+
+    background-color: #005B2F;
+    color: white;
 }
 
 /*--- detallesCompra.html ---*/
@@ -384,6 +426,13 @@ input[type="checkbox"]{
     text-decoration: none;
     color: black;
     margin: 20px;
+    transition: all 0.5s ease;
+}
+
+#confirmar:hover {
+
+    background-color: #005B2F;
+    color: white;
 }
 
 #atras {
@@ -396,6 +445,13 @@ input[type="checkbox"]{
     text-decoration: none;
     color: black;
     margin-top: 20px;
+    transition: all 0.5s ease;
+}
+
+#atras:hover {
+
+    background-color: #005B2F;
+    color: white;
 }
 
 /*--- empleadopagos.html ---*/
@@ -484,6 +540,13 @@ input[type="checkbox"]{
     text-decoration: none;
     color: white;
     float: right;
+    transition: all 0.5s ease;
+}
+
+.botonestado:hover {
+
+    background-color: #005B2F;
+    color: white;
 }
 
 form#filtro {
@@ -526,8 +589,8 @@ form#filtro .mismocss {
 
 #filtrar:hover {
 
-background-color: #335D92;
-color: white;
+    background-color: #335D92;
+    color: white;
 
 }
 
@@ -576,6 +639,13 @@ input[type="text"], input[type="file"] {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
     text-decoration: none;
     color: black;
+    transition: all 0.5s ease;
+}
+
+#btnCargar:hover {
+
+    background-color: #005B2F;
+    color: white;
 }
 
 .popup-overlay {
@@ -624,7 +694,6 @@ input[type="text"], input[type="file"] {
 
     margin: 50px auto 0px;
     max-width:600px;
-
 }
 
 .checkbox-content{
@@ -634,6 +703,7 @@ input[type="text"], input[type="file"] {
     justify-content: center;
     color: white;
 }
+
 .form-container {
 
     background-color: white;
@@ -836,6 +906,13 @@ input[type="text"], input[type="file"] {
     text-decoration: none;
     color: black;
     margin-top: 10px;
+    transition: all 0.5s ease;
+}
+
+#detalles:hover {
+
+    background-color: #005B2F;
+    color: white;
 }
 
 #cancelar {
@@ -848,11 +925,13 @@ input[type="text"], input[type="file"] {
     text-decoration: none;
     color: black;
     margin-top: 10px;
+    transition: all 0.5s ease;
 }
 
-.button-container button:hover {
+#cancelar:hover {
 
-    opacity: 0.9;
+    background-color: #005B2F;
+    color: white;
 }
 
 /*--- notificacion ---*/

@@ -13,3 +13,5 @@ function goToStatusEditor(){
 function goToStatusWriter(){
 	window.location.href='statusWriter.html'	
 }
+
+

@@ -131,6 +131,19 @@ window.onload = function() {
 
     document.getElementById("filtrar").addEventListener("click", filtrarLibros);
 
+    // PANTALLA CERRAR SESION
+
+    document.getElementById("Inicio").addEventListener("click", function() {
+        document.getElementById("avisodesesion").style.display = "block";
+    });
+    
+    document.getElementById("positivo").addEventListener("click", function() {
+        window.location.href = "usuario.html";
+    });
+    
+    document.getElementById("negativo").addEventListener("click", function() {
+        document.getElementById("avisodesesion").style.display = "none";
+    });
 };
 
 // Función para mostrar y ocultar la notificación
@@ -145,6 +158,8 @@ function Aviso() {
 
 }
 
+// ANIMACIÓN
+
 setTimeout(function() {
 
     document.getElementById('loading').classList.add('fade-out');
@@ -155,3 +170,4 @@ setTimeout(function() {
         document.getElementById('contenidoPrincipal').style.display = 'block';
     }, 200);
 }, 3000);
+

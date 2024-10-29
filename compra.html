@@ -96,8 +96,20 @@
 
                 <a onclick="detalle()"><button type="button" id="continuarDetalles">Continuar</button></a>
 
-                <a href="usuario.html"><button type="button" id="Volver">Volver</button></a>
+                <button type="button" onclick="volver()" id="Volver">Volver</button>
 
+                <script>
+            function volver() {
+                var sesion = JSON.parse(localStorage.getItem("logueado"));
+                alert(sesion["usuario"]);
+                
+                if (sesion[0].usuario  === "autor") {
+                    window.location.href = "pagautor.html";
+                } else {
+                    window.location.href = "usuario.html";
+                } 
+        }
+                </script>
             </section> 
 
     </main>

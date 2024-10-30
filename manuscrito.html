@@ -54,7 +54,7 @@
 
             <a href="estado.html"> <button id="Propuestas" class="boton">Propuestas</button> </a>
 
-            <a href="index.html"> <button id="Inicio" class="boton">Cerrar Sesión</button> </a> <!--Hacer una ventana de ¿Estas seguro de cerrar sesion?-->
+            <button id="Inicio" class="boton">Cerrar Sesión</button>
 
         </div>
 
@@ -62,9 +62,18 @@
 
     </nav>
 
+    <div id="avisodesesion"  style="display: none;">
+        <div id="vamo1">
+            <h5>¿Estas seguro de que quieres cerrar sesión?</h5>
+
+            <button id="positivo"  onclick="cerrar()">Sí, seguro</button>
+            <button id="negativo">No, quiero quedarme</button>
+        </div>
+    </div>
+
     <main>
         <div id="main-content">
-            <!-- Formulario de carga -->
+            
             <section id="upload-section">
                 <h2>Subir Manuscrito</h2>
                 <form id="manuscript-form">
@@ -98,4 +107,22 @@
         <p>&copy; 2024 YENNY</p>
     </footer>
 </body>
+
+<script>
+
+    // PANTALLA CERRAR SESION
+
+document.getElementById("Inicio").addEventListener("click", function() {
+document.getElementById("avisodesesion").style.display = "block";
+});
+
+document.getElementById("positivo").addEventListener("click", function() {
+    window.location.href = "usuario.html";
+});
+
+document.getElementById("negativo").addEventListener("click", function() {
+    document.getElementById("avisodesesion").style.display = "none";
+});
+
+</script>
 </html>

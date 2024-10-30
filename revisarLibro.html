@@ -22,9 +22,7 @@
             <img id="logo" src="https://cdn.glitch.global/c415df93-26cd-4cff-ae62-bb4aeac5282a/logo.png?v=1717799493674" alt="Logo YENNY" title="logo YENNY"/>
 
         </a>
-      
 
-  
         <div class="elementosaladerecha">
 
         <div class="arriba">
@@ -49,12 +47,21 @@
 
             <a href="estado.html"> <button id="Propuestas" class="boton">Propuestas</button> </a>
 
-            <a href="index.html"> <button id="Inicio" class="boton">Cerrar Sesión</button> </a> <!--Hacer una ventana de ¿Estas seguro de cerrar sesion?-->
+            <button id="Inicio" class="boton">Cerrar Sesión</button>
 
         </div>
 
         </div> 
     </nav>
+
+    <div id="avisodesesion"  style="display: none;">
+        <div id="vamo1">
+            <h5>¿Estas seguro de que quieres cerrar sesión?</h5>
+    
+            <button id="positivo"  onclick="cerrar()">Sí, seguro</button>
+            <button id="negativo">No, quiero quedarme</button>
+        </div>
+    </div>
 
     <div class="content">
         <div class="form-container">
@@ -85,5 +92,23 @@
         <p>&copy; 2024 YENNY</p>
     </footer>
 </body>
+
+<script>
+
+    // PANTALLA CERRAR SESION
+
+document.getElementById("Inicio").addEventListener("click", function() {
+document.getElementById("avisodesesion").style.display = "block";
+});
+
+document.getElementById("positivo").addEventListener("click", function() {
+    window.location.href = "usuario.html";
+});
+
+document.getElementById("negativo").addEventListener("click", function() {
+    document.getElementById("avisodesesion").style.display = "none";
+});
+
+</script>
 
 </html>

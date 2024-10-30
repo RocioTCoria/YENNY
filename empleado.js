@@ -78,8 +78,8 @@ window.onload = function() {
             img.classList.add("foto");
 
             var boton = document.createElement("a");
-            boton.textContent = "Comprar";
-            boton.href = "compra.html?" + index;
+            boton.textContent = "Estado";
+            boton.href = "status.html";
             boton.classList.add("boton");
 
             elemento.appendChild(titulo);

@@ -85,22 +85,67 @@ window.onload = function () {
     // Renderiza todas las propuestas inicialmente
     renderizarPropuestas(propuestas);
 
-    // Evento de filtrado
-    botonFiltrar.onclick = function () {
-        var filtroNombre = document.getElementById("idNombre").value.toLowerCase();
-        var filtroAutor = document.getElementById("idAutor").value.toLowerCase();
-        var filtroGenero = document.getElementById("idGenero").value.toLowerCase();
-        var filtroClave = document.getElementById("idClave").value.toLowerCase();
+    // Función para autocompletar mientras se escribe
+    function autocompletar(inputId, sugerenciasId, tipo) {
+        var input = document.getElementById(inputId);
+        var sugerenciasDiv = document.getElementById(sugerenciasId);
+        var valorInput = input.value.toLowerCase().trim();
 
-        var propuestasFiltradas = propuestas.filter(function (propuesta) {
-            var coincideNombre = propuesta.Nombre.toLowerCase().includes(filtroNombre);
-            var coincideAutor = propuesta.escritor.toLowerCase().includes(filtroAutor);
-            var coincideGenero = !filtroGenero || propuesta.Nombre.toLowerCase().includes(filtroGenero);
-            var coincideClave = !filtroClave || propuesta.Nombre.toLowerCase().includes(filtroClave);
+        // Filtrar sugerencias basadas en el tipo (Nombre o escritor)
+        var sugerencias = propuestas
+            .map(libro => libro[tipo])
+            .filter((valor, indice, arr) => valor.toLowerCase().includes(valorInput) && arr.indexOf(valor) === indice);
 
-            return coincideNombre && coincideAutor && coincideGenero && coincideClave;
+        // Mostrar las sugerencias debajo del campo de texto
+        sugerenciasDiv.innerHTML = "";
+        if (valorInput && sugerencias.length > 0) {
+            sugerencias.forEach(sugerencia => {
+                var div = document.createElement("div");
+                div.textContent = sugerencia;
+                div.addEventListener("click", function() {
+                    input.value = sugerencia;
+                    sugerenciasDiv.innerHTML = "";
+                });
+                sugerenciasDiv.appendChild(div);
+            });
+        }
+    }
+
+    // Evento input para mostrar las sugerencias mientras se escribe
+    document.getElementById("idNombre").addEventListener("input", function() {
+        autocompletar("idNombre", "sugerenciasNombre", "Nombre");
+    });
+
+    document.getElementById("idAutor").addEventListener("input", function() {
+        autocompletar("idAutor", "sugerenciasAutor", "escritor");
+    });
+
+    // Evento click en el botón "Filtrar" para mostrar los resultados filtrados
+    document.getElementById("filtrar").addEventListener("click", function() {
+        var nombre = document.getElementById("idNombre").value.toLowerCase().trim();
+        var autor = document.getElementById("idAutor").value.toLowerCase().trim();
+        
+        // Filtramos las propuestas según el nombre y el autor
+        var propuestasFiltradas = propuestas.filter(libro =>
+            (!nombre || libro.Nombre.toLowerCase().includes(nombre)) &&
+            (!autor || libro.escritor.toLowerCase().includes(autor))
+        );
+
+        // Si no hay resultados, mostrar el pop-up
+        if (propuestasFiltradas.length === 0) {
+            mostrarPopUp();
+        } else {
+            renderizarPropuestas(propuestasFiltradas); // Mostrar solo las propuestas filtradas
+        }
+    });
+
+    // Función para mostrar el pop-up
+    function mostrarPopUp() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "block";
+
+        document.getElementById("cerrarPopup").addEventListener("click", function() {
+            popup.style.display = "none";
         });
-
-        renderizarPropuestas(propuestasFiltradas);
-    };
+    }
 }

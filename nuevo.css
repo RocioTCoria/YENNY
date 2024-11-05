@@ -740,18 +740,19 @@ input[type="text"], input[type="file"] {
 
     position: fixed;
     bottom: 0;
-    right: 50px;
+    right: 0px;
     z-index: 10;
-    width: 500px;
+    max-width: 500px;
+    width:100%;
 }
 
 .chat-boton {
 
     position: absolute;
-    bottom: 50px;
+    bottom: 40px;
     z-index:100;
-    width:100px;
-    right: 0px;
+    width:80px;
+    right: 50px;
 }
 
 .chat-boton img {
@@ -761,45 +762,47 @@ input[type="text"], input[type="file"] {
 
 .chat-pop {
 
-    position:absolute;
-    width:80%;
-    height:400px;
+    position: absolute;
+    width: 90%;
+    height: 400px;
     overflow-y: scroll;
     background-color: white;
     border-radius: 5px;
-    bottom: 150px;
-    right: 70px;
+    bottom: 175px;
+    right: 5%;
     z-index: 110;
     display: none;
 }
 
 .chat-input {
 
-    width: 80%;
+    width: 100%;
     position: absolute;
-    bottom: 115px;
+    bottom: 130px;
     z-index: 200;
     display: none;
+    right: 0px;
 }
 
 .chat-input input[type="number"]{
 
-    width: 70%;
+    width: 66%;
     border-radius: 5px;
     border: 2px solid #335D92;
     margin-left: 6.5%;
-    height: 20px;
+    height: 40px;
 }
 
 .chat-input button {
 
-    width:20%;
+        width: 20.5%;
     background-color: #335D92;
     border-radius: 10px;
     padding: 3px;
     border: none;
     text-decoration: none;
     color: white;
+    height: 40px;
 }
 
 .bot {

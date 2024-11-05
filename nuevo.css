@@ -513,11 +513,13 @@ input[type="checkbox"]{
     width:90%;
 }
 
+
+
 .estadoLibros {
 
     flex: 1 1 calc(33.33% - 50px);
     max-width: calc(33.33% - 50px); 
-    min-width:400px;
+    min-width:250px;
     justify-content: space-between; 
     align-items: center;
     height: auto;

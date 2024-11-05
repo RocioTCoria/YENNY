@@ -72,14 +72,6 @@ nav {
     position: relative;
 }
 
-#notificacion {
-    display: none;
-    position: absolute;
-    top: 50%;
-    z-index: 10;  
-    max-width: 80%;
-}
-
 #fotoperfil {
 
     width: 80px;
@@ -377,6 +369,14 @@ footer p {
     transition: top 0.5s ease;
     z-index: 2;
     color:white;
+}
+
+#notificacion {
+    display: none;
+    position: absolute;
+    top: 50%;
+    z-index: 10;  
+    max-width: 80%;
 }
 
 /*--- CERRAR SESIÓN ---*/

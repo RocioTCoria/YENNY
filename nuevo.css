@@ -1081,6 +1081,14 @@ input[type="text"], input[type="file"] {
     color:white;
 }
 
+#notificacion {
+    display: none;
+    position: absolute;
+    top: 50%;
+    z-index: 10;  
+    max-width: 80%;
+}
+
 /*--- FOOTER---*/
 
 footer {

@@ -14,4 +14,14 @@ function goToStatusWriter(){
 	window.location.href='statusWriter.html'	
 }
 
+// Función para mostrar y ocultar la notificación
+function Aviso() {
+    var notificacion = document.getElementById("notificacion");
+    if (notificacion.style.display === "none" || notificacion.style.display === "") {
+        notificacion.style.display = "block";
+    } else {
+        notificacion.style.display = "none";
+    }
 
+
+}

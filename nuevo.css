@@ -78,6 +78,14 @@ nav {
     cursor: pointer;
 }
 
+#notificacion {
+    display: none;
+    position: absolute;
+    top: 50%;
+    z-index: 10;  
+    max-width: 80%;
+}
+
 #fotoperfil {
 
     width: 80px;

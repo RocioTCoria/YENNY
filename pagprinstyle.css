@@ -69,6 +69,15 @@ nav {
     height: 40px;
     max-width: 100%;
     cursor: pointer;
+    position: relative;
+}
+
+#notificacion {
+    display: none;
+    position: absolute;
+    top: 50%;
+    z-index: 10;  
+    max-width: 80%;
 }
 
 #fotoperfil {

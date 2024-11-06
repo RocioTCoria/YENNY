@@ -129,7 +129,7 @@ function detalle(){
     if(id && pago)
         window.location.href = "detallesCompra.html?"+ id + "?" + pago +"?" + index;
     else
-        alert("debe seleccionar una opcion de envio y una forma de pago")
+        alert("Seleccione una opción de envío y una forma de pago")
 }
 
 

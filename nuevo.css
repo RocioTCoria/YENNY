@@ -78,6 +78,14 @@ nav {
     cursor: pointer;
 }
 
+#notificacion {
+    display: none;
+    position: absolute;
+    top: 50%;
+    z-index: 10;  
+    max-width: 80%;
+}
+
 #fotoperfil {
 
     width: 80px;
@@ -1071,6 +1079,14 @@ input[type="text"], input[type="file"] {
     transition: top 0.5s ease;
     z-index: 2;
     color:white;
+}
+
+#notificacion {
+    display: none;
+    position: absolute;
+    top: 50%;
+    z-index: 10;  
+    max-width: 80%;
 }
 
 /*--- FOOTER---*/

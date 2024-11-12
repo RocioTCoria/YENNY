@@ -137,4 +137,5 @@ function detalle(){
 function confirma() {
 
     alert("Su compra se ha realizado. ¡Disfrute su libro!")
+    return  window.location.href = "index.html"
 }

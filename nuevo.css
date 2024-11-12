@@ -846,6 +846,10 @@ input[type="text"], input[type="file"] {
     display: none;
 }
 
+.chat-pop ul{
+    list-style-type: decimal;
+}
+
 .chat-input {
 
     width: 100%;

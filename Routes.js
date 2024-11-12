@@ -14,6 +14,12 @@ function goToStatusWriter(){
 	window.location.href='statusWriter.html'	
 }
 
+function cargarLibro(event){
+    event.preventDefault();
+    alert("su libro fue cargado exitosamente")
+    return goToStatusWriter();
+}
+
 // Función para mostrar y ocultar la notificación
 function Aviso() {
     var notificacion = document.getElementById("notificacion");

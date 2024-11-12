@@ -75,7 +75,7 @@
 
     <div class="content">
         <div class="form-container">
-            <form>
+            <form action="#" onsubmit="cargarLibro(event)">
                 <div class="row">
                     <div class="col">
                         <div class="file-input-container">
@@ -84,13 +84,13 @@
                         </div>
                     </div>
                     <div class="col">
-                        <input type="text" id="title" name="title" placeholder="Titulo">
-                        <input type="text" id="author" name="author" placeholder="Autor">
-                        <textarea id="synopsis" name="synopsis" placeholder="Sinopsis" rows="3"></textarea>
+                        <input type="text" id="title" name="title" placeholder="Titulo" required>
+                        <input type="text" id="author" name="author" placeholder="Autor" required>
+                        <textarea id="synopsis" name="synopsis" placeholder="Sinopsis" rows="3" required></textarea>
                     </div>
                 </div>
                 <div class="row">
-                    <textarea id="synopsis" name="synopsis" placeholder="Manuscrito" rows="4" class="w-98"></textarea>
+                    <textarea id="synopsis" name="synopsis" placeholder="Manuscrito" rows="4" class="w-98" required></textarea>
                 </div>
                 <button type="submit">Cargar</button>
             </form>
